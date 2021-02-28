@@ -17,3 +17,17 @@
 
 <%= link_to 'Edit', edit_account_path(@account) %> |
 <%= link_to 'Back', accounts_path %>
+<br>
+
+<input type="hidden" value="<%= @account.slug %>" id="slug">
+<button onclick="clickyClick()">Manage Account</button>
+
+
+<script type="text/javascript">
+
+  function clickyClick() {
+    url =  'http://' + document.getElementById("slug").value + '.' + 'localhost:3000' + "/schedules"
+    window.open(url);
+  }
+
+</script>
