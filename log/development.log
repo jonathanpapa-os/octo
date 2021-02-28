@@ -3595,3 +3595,1462 @@ Processing by AccountsController#home as HTML
 Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.7ms | Allocations: 4781)
 
 
+Started GET "/" for ::1 at 2021-02-21 17:26:21 +0800
+  
+ActiveRecord::NoDatabaseError (Unknown database 'octo_builder_development'):
+  
+activerecord (6.1.3) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `rescue in new_client'
+activerecord (6.1.3) lib/active_record/connection_adapters/mysql2_adapter.rb:39:in `new_client'
+activerecord (6.1.3) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.3) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.3) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.3) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.3) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.3) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.3) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.1) lib/puma/configuration.rb:247:in `call'
+puma (5.2.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.1) lib/puma/server.rb:431:in `process_client'
+puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE DATABASE `octo_builder_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE DATABASE `octo_builder_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+Started GET "/" for ::1 at 2021-02-21 17:32:13 +0800
+  [1m[35m (35.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (50.4ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (9.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 4 pending migrations:
+
+20210217073019_create_accounts.rb
+20210217074315_devise_create_users.rb
+20210217082814_create_schedules.rb
+20210217083041_add_accountid_to_schedules.rb
+
+
+):
+  
+activerecord (6.1.3) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.3) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.3) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.3) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.3) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.3) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.1) lib/puma/configuration.rb:247:in `call'
+puma (5.2.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.1) lib/puma/server.rb:431:in `process_client'
+puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE `octo_builder_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE `octo_builder_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5296718582501588025', 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAccounts (20210217073019)
+  [1m[35m (25.4ms)[0m  [1m[35mCREATE TABLE `accounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `slug` varchar(255), `name` varchar(255), `description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217073019')[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20210217074315)
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (40.5ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (31.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217074315')[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSchedules (20210217082814)
+  [1m[35m (29.2ms)[0m  [1m[35mCREATE TABLE `schedules` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `gender` varchar(255), `phone` varchar(255), `birthday` varchar(255), `address` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217082814')[0m
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAccountidToSchedules (20210217083041)
+  [1m[35m (55.2ms)[0m  [1m[35mALTER TABLE `schedules` ADD `account_id` varchar(255) AFTER `id`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217083041')[0m
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-02-21 09:32:58.013858', '2021-02-21 09:32:58.013858')[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5296718582501588025')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-02-21 17:33:03 +0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms | Allocations: 2485)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-21 17:33:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 626)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3752)
+Started GET "/" for ::1 at 2021-02-21 17:33:39 +0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 1744)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-21 17:33:39 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 626)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3142)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /var/www/html/octo/public/packs
+[Webpacker] Hash: ce14c115e350524bb5a9
+Version: webpack 4.46.0
+Time: 2211ms
+Built at: 02/21/2021 5:33:44 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-b43fa54005da8e229d8c.js    125 KiB  application  [emitted] [immutable]  application
+js/application-b43fa54005da8e229d8c.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-b43fa54005da8e229d8c.js js/application-b43fa54005da8e229d8c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 5067.1ms | Allocations: 285450)
+Completed 200 OK in 5085ms (Views: 5072.5ms | ActiveRecord: 3.7ms | Allocations: 293239)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-21 17:33:48 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 35ms (ActiveRecord: 7.9ms | Allocations: 2077)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1054)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4235)
+Completed 200 OK in 311ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 5788)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (73.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS `octo_builder_development`[0m
+  [1m[35m (11.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS `octo_builder_test`[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE DATABASE `octo_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE DATABASE `octo_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (29.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (29.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('1918230513352316940', 0)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAccounts (20210217073019)
+  [1m[35m (25.0ms)[0m  [1m[35mCREATE TABLE `accounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `slug` varchar(255), `name` varchar(255), `description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217073019')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20210217074315)
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (28.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217074315')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSchedules (20210217082814)
+  [1m[35m (29.5ms)[0m  [1m[35mCREATE TABLE `schedules` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `gender` varchar(255), `phone` varchar(255), `birthday` varchar(255), `address` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217082814')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAccountidToSchedules (20210217083041)
+  [1m[35m (40.7ms)[0m  [1m[35mALTER TABLE `schedules` ADD `account_id` varchar(255) AFTER `id`[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217083041')[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-02-21 09:37:47.974707', '2021-02-21 09:37:47.974707')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1918230513352316940')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/users/sign_in" for ::1 at 2021-02-21 17:42:28 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 628)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 6011)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 122.5ms | Allocations: 52061)
+Completed 200 OK in 149ms (Views: 127.1ms | ActiveRecord: 3.4ms | Allocations: 60929)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-21 17:42:42 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 257)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 150)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2807)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 5930)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 7585)
+
+
+Started POST "/users" for ::1 at 2021-02-21 17:42:57 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jhn.knnth.prljs@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('jhn.knnth.prljs@gmail.com', '$2a$12$Ji52GfR4TTK75JVPgg619O/HAt2Q1ysxAT3elGIjWH8j.5yDFtgG6', '2021-02-21 09:42:57.606158', '2021-02-21 09:42:57.606158')[0m
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 394ms (ActiveRecord: 14.7ms | Allocations: 10589)
+
+
+Started GET "/" for ::1 at 2021-02-21 17:42:57 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3316)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 1.1ms | Allocations: 5728)
+
+
+Started GET "/schedules" for ::1 at 2021-02-21 17:43:55 +0800
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.7ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 26ms (ActiveRecord: 12.5ms | Allocations: 3841)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-02-25 17:10:31 +0800
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 126.8ms | Allocations: 46296)
+Completed 200 OK in 232ms (Views: 132.1ms | ActiveRecord: 17.1ms | Allocations: 55791)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-02-25 17:10:47 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 2.3ms | Allocations: 5088)
+
+
+Started GET "/" for ::1 at 2021-02-25 17:10:48 +0800
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 243)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-25 17:10:48 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 617)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 3008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6175)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.0ms | Allocations: 8546)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-25 17:15:49 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 160)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1052)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4216)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 4842)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/email_templates.debug-968ae36cb2b038dba6dc2f81b4464908b9e6603ff30b1d81a91d79f699b8d90c.css"):
+  
+Started GET "/packs/js/4-0fcc9f6872f5940f6a49.chunk.js" for ::1 at 2021-02-25 17:15:50 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/4-0fcc9f6872f5940f6a49.chunk.js"):
+  
+Started GET "/packs/js/0-07115daf3ebc719c46cf.chunk.js" for ::1 at 2021-02-25 17:15:50 +0800
+Started GET "/packs/js/1-14d610074cdc752201fd.chunk.js" for ::1 at 2021-02-25 17:15:50 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/1-14d610074cdc752201fd.chunk.js"):
+  
+Started GET "/packs/js/2-35953dba78bedd8e1bbe.chunk.js" for ::1 at 2021-02-25 17:15:50 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/0-07115daf3ebc719c46cf.chunk.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/2-35953dba78bedd8e1bbe.chunk.js"):
+  
+Started GET "/packs/js/runtime~application-aa001ceb574a6f67800d.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/runtime~application-aa001ceb574a6f67800d.js.map"):
+  
+Started GET "/packs/js/application-589d678d17eedaf8f96f.chunk.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/application-589d678d17eedaf8f96f.chunk.js.map"):
+  
+Started GET "/packs/js/runtime~emails-f7bbec3a25af45545eed.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/runtime~emails-f7bbec3a25af45545eed.js.map"):
+  
+Started GET "/packs/js/emails-a70328f3aab06db77e3d.chunk.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/emails-a70328f3aab06db77e3d.chunk.js.map"):
+  
+Started GET "/packs/js/3-c5a238f67a946a102662.chunk.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/3-c5a238f67a946a102662.chunk.js.map"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/assets/tinymce.debug-e880f0673f80842e0f4955b32b6ba9b2c8c0a5b197f167203d1349cb87162130.js"):
+  
+Started GET "/packs/js/runtime~image_reader-4bfe346b8847ce537147.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/runtime~image_reader-4bfe346b8847ce537147.js.map"):
+  
+Started GET "/packs/js/image_reader-6020905b13a455bbbf08.chunk.js.map" for ::1 at 2021-02-25 17:15:51 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/packs/js/image_reader-6020905b13a455bbbf08.chunk.js.map"):
+  
+Started GET "/" for ::1 at 2021-02-25 17:15:53 +0800
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 271)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-25 17:15:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 7.6ms | Allocations: 165)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4392)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 5109)
+
+
+Started GET "/" for ::1 at 2021-02-28 12:09:14 +0800
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 17ms (ActiveRecord: 0.0ms | Allocations: 1747)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:09:14 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 626)
+  Rendered /home/ubuntu/.rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 3136)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: e46b6c56a51fa60c803c
+Version: webpack 4.46.0
+Time: 2871ms
+Built at: 02/28/2021 12:09:19 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-bf9dc0f70401c187bac0.js    134 KiB  application  [emitted] [immutable]  application
+js/application-bf9dc0f70401c187bac0.js.map    148 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-bf9dc0f70401c187bac0.js js/application-bf9dc0f70401c187bac0.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 195 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 1.27 KiB {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/stylesheets/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss)
+Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: Specified Tailwind config file "/var/www/html/octo/app/javascript/stylesheets/tailwind.config.js" doesn't exist.
+    at _default (/var/www/html/octo/node_modules/tailwindcss/lib/lib/registerConfigAsDependency.js:16:11)
+    at module.exports (/var/www/html/octo/node_modules/tailwindcss/lib/index.js:85:58)
+    at Object.<anonymous> (/var/www/html/octo/postcss.config.js:3:27)
+    at Module._compile (/var/www/html/octo/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+    at Module.load (internal/modules/cjs/loader.js:863:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+    at Module.require (internal/modules/cjs/loader.js:887:19)
+    at require (/var/www/html/octo/node_modules/v8-compile-cache/v8-compile-cache.js:159:20)
+    at module.exports (/var/www/html/octo/node_modules/import-fresh/index.js:28:9)
+    at loadJs (/var/www/html/octo/node_modules/cosmiconfig/dist/loaders.js:9:18)
+    at Explorer.loadFileContent (/var/www/html/octo/node_modules/cosmiconfig/dist/createExplorer.js:230:12)
+    at /var/www/html/octo/node_modules/cosmiconfig/dist/createExplorer.js:252:21
+ @ ./app/javascript/stylesheets/application.scss 2:26-228
+ @ ./app/javascript/packs/application.js
+
+  Rendered layout layouts/application.html.erb (Duration: 5185.1ms | Allocations: 50481)
+Completed 200 OK in 5236ms (Views: 5200.9ms | ActiveRecord: 6.9ms | Allocations: 58273)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:15:57 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 621)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 29.8ms | Allocations: 5729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 141.7ms | Allocations: 51805)
+Completed 200 OK in 181ms (Views: 153.8ms | ActiveRecord: 4.1ms | Allocations: 60356)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:16:54 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.5ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.2ms | Allocations: 1829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.1ms | Allocations: 5233)
+Completed 200 OK in 59ms (Views: 49.2ms | ActiveRecord: 0.0ms | Allocations: 7369)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:16:55 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1036)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 4240)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.0ms | Allocations: 4859)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:16:55 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4231)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 4836)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:16:56 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1029)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 4231)
+Completed 200 OK in 41ms (Views: 37.0ms | ActiveRecord: 0.0ms | Allocations: 4836)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:17:59 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1029)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+Hash: b71a8b80ad81b43f3fd9
+Version: webpack 4.46.0
+Time: 1872ms
+Built at: 02/28/2021 12:18:02 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-252cf585eb40d356dec8.js    135 KiB  application  [emitted] [immutable]  application
+js/application-252cf585eb40d356dec8.js.map    148 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-252cf585eb40d356dec8.js js/application-252cf585eb40d356dec8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 195 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 2.54 KiB {application} [built] [failed] [1 error]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/stylesheets/application.scss (./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss)
+Module build failed (from ./node_modules/postcss-loader/src/index.js):
+Error: PostCSS plugin postcss-nested requires PostCSS 8.
+Migration guide for end-users:
+https://github.com/postcss/postcss/wiki/PostCSS-8-for-end-users
+    at Processor.normalize (/var/www/html/octo/node_modules/postcss/lib/processor.js:167:15)
+    at new Processor (/var/www/html/octo/node_modules/postcss/lib/processor.js:56:25)
+    at postcss (/var/www/html/octo/node_modules/postcss/lib/postcss.js:55:10)
+    at /var/www/html/octo/node_modules/tailwindcss/lib/util/parseObjectStyles.js:24:33
+    at arrayMap (/var/www/html/octo/node_modules/lodash/lodash.js:653:23)
+    at map (/var/www/html/octo/node_modules/lodash/lodash.js:9622:14)
+    at Function.flatMap (/var/www/html/octo/node_modules/lodash/lodash.js:9325:26)
+    at parseObjectStyles (/var/www/html/octo/node_modules/tailwindcss/lib/util/parseObjectStyles.js:23:26)
+    at parseObjectStyles (/var/www/html/octo/node_modules/tailwindcss/lib/util/parseObjectStyles.js:20:12)
+    at /var/www/html/octo/node_modules/tailwindcss/lib/util/processPlugins.js:37:123
+    at arrayMap (/var/www/html/octo/node_modules/lodash/lodash.js:653:23)
+    at map (/var/www/html/octo/node_modules/lodash/lodash.js:9622:14)
+    at Function.flatMap (/var/www/html/octo/node_modules/lodash/lodash.js:9325:26)
+    at parseStyles (/var/www/html/octo/node_modules/tailwindcss/lib/util/processPlugins.js:37:26)
+    at addComponents (/var/www/html/octo/node_modules/tailwindcss/lib/util/processPlugins.js:131:18)
+    at /var/www/html/octo/node_modules/tailwindcss/lib/plugins/container.js:101:5
+    at /var/www/html/octo/node_modules/tailwindcss/lib/util/processPlugins.js:69:5
+    at Array.forEach (<anonymous>)
+    at _default (/var/www/html/octo/node_modules/tailwindcss/lib/util/processPlugins.js:63:11)
+    at /var/www/html/octo/node_modules/tailwindcss/lib/processTailwindFeatures.js:64:54
+    at LazyResult.run (/var/www/html/octo/node_modules/postcss/lib/lazy-result.js:288:14)
+    at LazyResult.asyncTick (/var/www/html/octo/node_modules/postcss/lib/lazy-result.js:212:26)
+    at LazyResult.asyncTick (/var/www/html/octo/node_modules/postcss/lib/lazy-result.js:225:14)
+    at /var/www/html/octo/node_modules/postcss/lib/lazy-result.js:254:14
+    at new Promise (<anonymous>)
+    at LazyResult.async (/var/www/html/octo/node_modules/postcss/lib/lazy-result.js:250:23)
+    at LazyResult.then (/var/www/html/octo/node_modules/postcss/lib/lazy-result.js:131:17)
+    at /var/www/html/octo/node_modules/postcss-loader/src/index.js:142:8
+ @ ./app/javascript/stylesheets/application.scss 2:26-228
+ @ ./app/javascript/packs/application.js
+
+  Rendered layout layouts/application.html.erb (Duration: 3149.2ms | Allocations: 5455)
+Completed 200 OK in 3156ms (Views: 3152.1ms | ActiveRecord: 0.0ms | Allocations: 6071)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:24:29 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.3ms | Allocations: 621)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 28.7ms | Allocations: 5730)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /var/www/html/octo/public/packs
+[Webpacker] Hash: 89649b708b73e1a3d89f
+Version: webpack 4.46.0
+Time: 12389ms
+Built at: 02/28/2021 12:24:43 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-3039a4e4edb89376a1ae.js      5 MiB  application  [emitted] [immutable]  application
+js/application-3039a4e4edb89376a1ae.js.map   5.31 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-3039a4e4edb89376a1ae.js js/application-3039a4e4edb89376a1ae.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 195 bytes {application} [built]
+[./app/javascript/stylesheets/application.scss] 664 bytes {application} [built]
+[./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./app/javascript/stylesheets/application.scss] ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./app/javascript/stylesheets/application.scss 4.87 MiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 5 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 14646.9ms | Allocations: 53154)
+Completed 200 OK in 14681ms (Views: 14657.2ms | ActiveRecord: 6.4ms | Allocations: 61705)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:29:01 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1829)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 5248)
+Completed 200 OK in 49ms (Views: 45.5ms | ActiveRecord: 0.0ms | Allocations: 7372)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:29:43 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5255)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 7375)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:30:04 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1835)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 5244)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 7350)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:33:38 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 5260)
+Completed 200 OK in 60ms (Views: 49.8ms | Allocations: 7379)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:33:40 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4259)
+Completed 200 OK in 15ms (Views: 13.4ms | Allocations: 4864)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:33:42 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4253)
+Completed 200 OK in 21ms (Views: 18.9ms | Allocations: 4870)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:41:07 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4252)
+Completed 200 OK in 14ms (Views: 12.3ms | Allocations: 4857)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:42:14 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.3ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 1852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 5266)
+Completed 200 OK in 69ms (Views: 64.0ms | Allocations: 7398)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:45:25 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1880)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 5290)
+Completed 200 OK in 28ms (Views: 26.3ms | Allocations: 7396)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:48:15 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5287)
+Completed 200 OK in 18ms (Views: 16.9ms | Allocations: 7392)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:48:27 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.2ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 1876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 5286)
+Completed 200 OK in 77ms (Views: 73.3ms | Allocations: 7391)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:49:00 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1886)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 5304)
+Completed 200 OK in 71ms (Views: 66.6ms | Allocations: 7413)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:57:55 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.9ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 1857)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 5275)
+Completed 200 OK in 62ms (Views: 56.8ms | Allocations: 7390)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:58:15 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1843)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 5252)
+Completed 200 OK in 25ms (Views: 23.7ms | Allocations: 7357)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:58:33 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1844)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 5258)
+Completed 200 OK in 44ms (Views: 39.3ms | Allocations: 7363)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 12:59:39 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1849)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 5262)
+Completed 200 OK in 59ms (Views: 53.9ms | Allocations: 7381)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 13:00:34 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1860)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5269)
+Completed 200 OK in 18ms (Views: 16.9ms | Allocations: 7374)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 13:01:07 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 5273)
+Completed 200 OK in 30ms (Views: 27.1ms | Allocations: 7379)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 13:01:20 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1864)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 5273)
+Completed 200 OK in 28ms (Views: 26.7ms | Allocations: 7394)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 13:58:58 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.8ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.7ms | Allocations: 1866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 5277)
+Completed 200 OK in 69ms (Views: 65.6ms | Allocations: 7392)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 13:59:09 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5280)
+Completed 200 OK in 20ms (Views: 18.7ms | Allocations: 7385)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:00:11 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.1ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.5ms | Allocations: 1868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 5281)
+Completed 200 OK in 61ms (Views: 56.4ms | Allocations: 7401)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:00:37 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5275)
+Completed 200 OK in 25ms (Views: 22.9ms | Allocations: 7380)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:00:58 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5296)
+Completed 200 OK in 19ms (Views: 17.2ms | Allocations: 7408)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:01:22 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1874)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 5283)
+Completed 200 OK in 20ms (Views: 18.7ms | Allocations: 7402)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:01:58 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5285)
+Completed 200 OK in 15ms (Views: 14.4ms | Allocations: 7390)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:02:07 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1876)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5285)
+Completed 200 OK in 17ms (Views: 15.3ms | Allocations: 7400)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:02:33 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1877)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5286)
+Completed 200 OK in 17ms (Views: 15.8ms | Allocations: 7391)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:02:41 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5287)
+Completed 200 OK in 44ms (Views: 39.8ms | Allocations: 7406)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:04:06 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5287)
+Completed 200 OK in 24ms (Views: 21.8ms | Allocations: 7392)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:04:26 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 5.5ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 1880)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 5298)
+Completed 200 OK in 75ms (Views: 69.7ms | Allocations: 7420)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:05:50 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 1064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 4285)
+Completed 200 OK in 54ms (Views: 49.1ms | Allocations: 4890)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:08:09 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 4271)
+Completed 200 OK in 36ms (Views: 31.6ms | Allocations: 4875)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:08:36 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5287)
+Completed 200 OK in 49ms (Views: 36.4ms | Allocations: 7406)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:09:40 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1875)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 5289)
+Completed 200 OK in 27ms (Views: 25.0ms | Allocations: 7395)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:10:21 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1878)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 5287)
+Completed 200 OK in 40ms (Views: 34.8ms | Allocations: 7406)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:10:55 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.7ms | Allocations: 531)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1879)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 5297)
+Completed 200 OK in 37ms (Views: 34.0ms | Allocations: 7418)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:11:33 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1920)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5102)
+Completed 200 OK in 22ms (Views: 20.1ms | Allocations: 7092)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-28 14:11:38 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 20ms (ActiveRecord: 9.3ms | Allocations: 2237)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4295)
+Completed 200 OK in 309ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 5352)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-28 14:11:50 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jhn.knnth.prljs@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 362ms (ActiveRecord: 4.0ms | Allocations: 4170)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:11:50 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3362)
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 1.2ms | Allocations: 5706)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:13:12 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3544)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 1.5ms | Allocations: 5996)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:15:50 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering layouts/main.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/main.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5814)
+Completed 200 OK in 33ms (Views: 12.0ms | ActiveRecord: 9.2ms | Allocations: 12907)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:16:35 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3251)
+Completed 200 OK in 27ms (Views: 6.8ms | ActiveRecord: 8.1ms | Allocations: 9437)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-02-28 14:16:41 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 4.4ms | Allocations: 2305)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:16:41 +0800
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:16:41 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 542)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1899)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5125)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 7015)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:16:43 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4275)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 4881)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:16:46 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 112)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 5605)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 7008)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:22:39 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 482)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5672)
+Completed 200 OK in 18ms (Views: 16.0ms | Allocations: 7720)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:23:40 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 482)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 5660)
+Completed 200 OK in 25ms (Views: 24.3ms | Allocations: 7700)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:24:00 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 482)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 5667)
+Completed 200 OK in 48ms (Views: 45.4ms | Allocations: 7708)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:24:15 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 482)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 5673)
+Completed 200 OK in 51ms (Views: 46.5ms | Allocations: 7719)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:24:24 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4584)
+Completed 200 OK in 17ms (Views: 16.4ms | Allocations: 6206)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:24:26 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 105)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 4341)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 4895)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:24:56 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4280)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 4889)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-28 14:24:58 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jhn.knnth.prljs@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 352ms (ActiveRecord: 20.5ms | Allocations: 4112)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:24:59 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.5ms | Allocations: 165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3363)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.9ms | Allocations: 5637)
+
+
+Started GET "/accounts" for ::1 at 2021-02-28 14:25:02 +0800
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (9.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:16
+  Rendered accounts/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4205)
+Completed 200 OK in 47ms (Views: 12.0ms | ActiveRecord: 11.0ms | Allocations: 9189)
+
+
+Started GET "/accounts/new" for ::1 at 2021-02-28 14:25:07 +0800
+Processing by AccountsController#new as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_form.html.erb (Duration: 6.2ms | Allocations: 1415)
+  Rendered accounts/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1762)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4960)
+Completed 200 OK in 38ms (Views: 18.1ms | ActiveRecord: 9.0ms | Allocations: 10996)
+
+
+Started GET "/accounts" for ::1 at 2021-02-28 14:25:10 +0800
+Processing by AccountsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/index.html.erb within layouts/application
+  [1m[36mAccount Load (1.7ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts`[0m
+  ↳ app/views/accounts/index.html.erb:16
+  Rendered accounts/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3976)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 3.3ms | Allocations: 5524)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:25:33 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms | Allocations: 1450)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:25:33 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3262)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 1.9ms | Allocations: 4802)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:25:35 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3254)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 1.4ms | Allocations: 4794)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-02-28 14:25:38 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms | Allocations: 1723)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:25:38 +0800
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 230)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:25:38 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4295)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4900)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-02-28 14:27:53 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 105)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4341)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 4894)
+
+
+Started POST "/users" for ::1 at 2021-02-28 14:28:11 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.9ms | Allocations: 978)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 104)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 6272)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 8740)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:28:15 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1057)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4280)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms | Allocations: 4888)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-02-28 14:28:19 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jhn.knnth.prljs@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 328ms (ActiveRecord: 7.3ms | Allocations: 2339)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:28:20 +0800
+Processing by AccountsController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering accounts/home.html.erb within layouts/application
+  Rendered accounts/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3258)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.0ms | Allocations: 4797)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-02-28 14:28:22 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 3.6ms | Allocations: 1717)
+
+
+Started GET "/" for ::1 at 2021-02-28 14:28:22 +0800
+Processing by AccountsController#home as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 229)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-02-28 14:28:22 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 4277)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 4880)
+
+
+Started GET "/users/password/new" for ::1 at 2021-02-28 14:28:26 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 156)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 996)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4161)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 5604)
+
+
