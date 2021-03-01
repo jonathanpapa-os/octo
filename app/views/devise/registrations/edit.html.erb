@@ -9,7 +9,6 @@
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
   <div class="field">
@@ -36,8 +35,10 @@
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<div class="form-signin">
+  <br/>
+  <br/>
+<h3>Close my account</h3>
+<p><%= button_to "Request cancellation", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
