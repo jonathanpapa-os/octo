@@ -1,39 +1,43 @@
-<p id="notice"><%= notice %></p>
+<br><br>
 
-<h1>Schedules</h1> <br>
-<strong><%= current_user.email %></strong>
+  <% if current_user.superadmin_role == TRUE ||  current_user.supervisor_role == TRUE %>
+    <h1><%= @account.slug %> page</h1>
+    <br>
+    <%= link_to 'Book an appointment', new_schedule_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Gender</th>
-      <th>Phone</th>
-      <th>Birthday</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table class="center">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Phone</th>
+          <th>Birthday</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @schedules.each do |schedule| %>
-      <tr>
-        <td><%= schedule.name %></td>
-        <td><%= schedule.gender %></td>
-        <td><%= schedule.phone %></td>
-        <td><%= schedule.birthday %></td>
-        <td><%= schedule.address %></td>
-        <td><%= schedule.email %></td>
-        <td><%= link_to 'Show', schedule %></td>
-        <td><%= link_to 'Edit', edit_schedule_path(schedule) %></td>
-        <td><%= link_to 'Destroy', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @schedules.each do |schedule| %>
+          <tr>
+            <td><%= schedule.name %></td>
+            <td><%= schedule.gender %></td>
+            <td><%= schedule.phone %></td>
+            <td><%= schedule.birthday %></td>
+            <td><%= schedule.address %></td>
+            <td><%= schedule.email %></td>
+            <td><%= link_to 'Show Details', schedule %></td>
+            <td><%= link_to 'Cancel Booking', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+  <% else %>
 
-<%= link_to 'New Schedule', new_schedule_path %>
-<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+  <h1><%= @account.slug %> user page</h1>
+    <br>
+    <%= link_to 'Book an appointment', new_schedule_path %>
+
+  <% end %>

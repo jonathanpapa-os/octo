@@ -1,5 +1,25 @@
-<h1>New Schedule</h1>
+<% if current_user.superadmin_role == TRUE %>
 
-<%= render 'form', schedule: @schedule %>
+    <br><br>
+    <h1><%= @account.slug %> page</h1><br>
+    <h1>BOOK AN APPOINTMENT NOW! </h1><br>
+    <%= render 'form', schedule: @schedule %>
 
-<%= link_to 'Back', schedules_path %>
+<% else %>
+
+  <% if  current_user.supervisor_role == TRUE %>
+
+    <br><br>
+    <h1><%= @account.slug %> page</h1><br>
+    <h1>BOOK AN APPOINTMENT NOW! </h1><br>
+    <%= render 'form', schedule: @schedule %>
+
+  <% else %>
+
+    <br><br>
+    <h1><%= @account.slug %> page</h1><br>
+    <h1>BOOK AN APPOINTMENT NOW! </h1><br>      
+    <%= render 'form', schedule: @schedule %>
+
+  <% end %>
+<% end %>
