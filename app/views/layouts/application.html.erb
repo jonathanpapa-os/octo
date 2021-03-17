@@ -12,7 +12,7 @@
   </head>
 
   <body class="bg-gray-200">
-      <a class="navbar-brand" href="">Octo Sched</a>
+      <a class="navbar-brand" href="/schedules/new">Octo Sched</a>
 
     <% if current_user %>
         <% if current_user.superadmin_role == TRUE %>
@@ -24,7 +24,7 @@
 
         <% else %>
 
-          <% if  current_user.supervisor_role == TRUE %>
+          <% if current_user.supervisor_role == TRUE %>
 
             | <a href="/schedules">Manage Schedules</a> |
             <strong><%= current_user.email %></strong> |
