@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user.superadmin_role == TRUE %>
+
 <p>
   <strong>Slug:</strong>
   <%= @account.slug %>
@@ -22,6 +24,13 @@
 <input type="hidden" value="<%= @account.slug %>" id="slug">
 <button onclick="clickyClick()">Manage Account</button>
 
+
+<% else %>
+
+    <br><br>
+    <%= link_to 'Book an appointment', new_schedule_path %>
+
+<% end %>
 
 <script type="text/javascript">
 
