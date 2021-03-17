@@ -1,6 +1,14 @@
+<br><br>
+
+<% if current_user.superadmin_role == TRUE ||  current_user.supervisor_role == TRUE %>
+
 <h1>Editing Schedule</h1>
+<br>
 
-<%= render 'form', schedule: @schedule %>
+<%= render 'form2', schedule: @schedule %>
 
-<%= link_to 'Show', @schedule %> |
-<%= link_to 'Back', schedules_path %>
+<% else %>
+
+  <%= link_to 'Book an appointment ', new_schedule_path %>
+
+<% end %>

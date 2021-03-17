@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<br><br>
+
+<% if current_user.superadmin_role == TRUE ||  current_user.supervisor_role == TRUE %>
+
+<h1><%= @account.slug %> page</h1><br>
+
 <p>
   <strong>Name:</strong>
   <%= @schedule.name %>
@@ -30,5 +36,14 @@
   <%= @schedule.email %>
 </p>
 
-<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
-<%= link_to 'Back', schedules_path %>
+  <br>
+  <%= link_to 'Back', schedules_path %> |
+  <%= link_to 'Reschedule', edit_schedule_path(@schedule) %> |
+  <%= link_to 'Cancel Booking', @schedule, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% else %>
+
+  <br>
+  <%= link_to 'Book an appointment', new_schedule_path %>
+
+<% end %>
