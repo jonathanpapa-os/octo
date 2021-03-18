@@ -10,9 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_065050) do
+ActiveRecord::Schema.define(version: 2021_03_18_072227) do
 
   create_table "accounts", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "email"
     t.string "slug"
     t.string "name"
     t.string "description"
