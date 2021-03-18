@@ -1,34 +1,38 @@
 <p id="notice"><%= notice %></p>
+<br><br>
 
 <% if current_user.superadmin_role == TRUE %>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @account.slug %>
-</p>
+  <p>
+    <strong>Slug:</strong>
+    <%= @account.slug %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @account.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @account.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @account.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @account.description %>
+  </p>
 
-<%= link_to 'Edit', edit_account_path(@account) %> |
-<%= link_to 'Back', accounts_path %>
-<br>
+  <p>
+    <strong>Email:</strong>
+    <%= @account.email %>
+  </p>
 
-<input type="hidden" value="<%= @account.slug %>" id="slug">
-<button onclick="clickyClick()">Manage Account</button>
-
+  <br>
+  <%= link_to 'Back', accounts_path %> |
+  <%= link_to 'Edit', edit_account_path(@account) %> |
+  <input type="hidden" value="<%= @account.slug %>" id="slug">
+  <button onclick="clickyClick()">Manage Account</button>
 
 <% else %>
 
-    <br><br>
-    <%= link_to 'Book an appointment', new_schedule_path %>
+  <br><br>
+  <%= link_to 'Book an appointment', new_schedule_path %>
 
 <% end %>
 

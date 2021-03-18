@@ -1,9 +1,8 @@
 <% if current_user.superadmin_role == TRUE %>
 
-    <h1>New Account</h1>
-
+    <br><br>
+    <h1>Create New Account</h1><br>
     <%= render 'form', account: @account %>
-
     <%= link_to 'Back', accounts_path %>
 
 <% else %>
