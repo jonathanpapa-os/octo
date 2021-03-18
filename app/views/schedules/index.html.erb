@@ -1,43 +1,52 @@
 <br><br>
 
-  <% if current_user.superadmin_role == TRUE ||  current_user.supervisor_role == TRUE %>
-    <h1><%= @account.slug %> page</h1>
-    <br>
-    <%= link_to 'Book an appointment', new_schedule_path %>
+<% if current_user.superadmin_role == TRUE || current_user.email == @account.email %>
+  <h1><%= @account.slug %> page <br>
+  <br>
 
-    <table class="center">
-      <thead>
+  <table class="center">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Birthday</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @schedules.each do |schedule| %>
         <tr>
-          <th>Name</th>
-          <th>Gender</th>
-          <th>Phone</th>
-          <th>Birthday</th>
-          <th>Address</th>
-          <th>Email</th>
-          <th colspan="3"></th>
+          <td><%= schedule.name %></td>
+          <td><%= schedule.gender %></td>
+          <td><%= schedule.phone %></td>
+          <td><%= schedule.birthday %></td>
+          <td><%= schedule.address %></td>
+          <td><%= schedule.email %></td>
+          <td><%= link_to 'Show Details', schedule %></td>
+          <td><%= link_to 'Cancel Booking', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
-      </thead>
+      <% end %>
+    </tbody>
+  </table>
 
-      <tbody>
-        <% @schedules.each do |schedule| %>
-          <tr>
-            <td><%= schedule.name %></td>
-            <td><%= schedule.gender %></td>
-            <td><%= schedule.phone %></td>
-            <td><%= schedule.birthday %></td>
-            <td><%= schedule.address %></td>
-            <td><%= schedule.email %></td>
-            <td><%= link_to 'Show Details', schedule %></td>
-            <td><%= link_to 'Cancel Booking', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+  <%= link_to 'Book an appointment', new_schedule_path %>
+
+<% else %>
+
+  <% if @account.slug == "admin" %>
+
+    <h1>Welcome to Paralejas Consulting</h1><br>
+    <h1>Go to specific slug!</h1>    
 
   <% else %>
 
-  <h1><%= @account.slug %> user page</h1>
+    <h1><%= @account.slug %> user page</h1>
     <br>
-    <%= link_to 'Book an appointment', new_schedule_path %>
+    <%= link_to 'Book an appointment!', new_schedule_path %>
 
   <% end %>
+<% end %>
