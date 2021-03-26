@@ -12,33 +12,41 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <label>Full Name</label>
     <%= form.text_field :name, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :gender %>
-    <%= form.text_field :gender, required: true %>
+    <label>Email</label>
+    <%= form.text_field :email, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <label>Phone Number</label>
     <%= form.text_field :phone, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :birthday %>
+    <label>Gender</label><br>
+    <%= form.radio_button :gender, 'Male' %> Male
+    <%= form.radio_button :gender, 'Female' %>Female
+    <%= form.radio_button :gender, 'N/A' %>N/A
+  </div>
+
+  <div class="field">
+    <label>Birthday</label>
     <%= form.text_field :birthday, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :address %>
+    <label>Complete Address <i>(Street, Barangay, Municipality/ City)</i></label>
     <%= form.text_field :address, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, required: true %>
+    <label>Date & Time</label>
+    <%= form.date_select :starts_at %>
+    <%= form.time_select :starts_at, :ignore_date => true %>
   </div>
 
   <div class="field">
