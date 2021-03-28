@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "authentication"%>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -18,7 +18,7 @@
         <% if current_user.superadmin_role == TRUE %>
 
           <%= link_to "Admin Dashboard", rails_admin_path, :class => 'nav-link' %> |
-          <a href="/accounts">Manage Accounts</a> | 
+          <a href="/accounts">Manage Accounts</a> |
           <strong><%= current_user.email %></strong> |
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
 
@@ -39,7 +39,7 @@
           <% end %>
         <% end %>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>
