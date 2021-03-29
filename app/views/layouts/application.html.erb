@@ -11,35 +11,23 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-gray-200">
-      <a class="navbar-brand" href="/schedules/new">Octo Sched</a> |
+<body class="bg-gray-200">
+  <a class="navbar-brand" href="/schedules/new">Octo Sched</a>
 
-    <% if current_user %>
-        <% if current_user.superadmin_role == TRUE %>
-
-          <%= link_to "Admin Dashboard", rails_admin_path, :class => 'nav-link' %> |
-          <a href="/accounts">Manage Accounts</a> |
-          <strong><%= current_user.email %></strong> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-
-        <% else %>
-          <% if current_user.email == @account.email %>
-
-            <a href="/schedules">Manage Schedules</a> |
-            <strong><%= current_user.email %></strong> |
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-
-          <% else %>
-
-            <strong><%= current_user.email %></strong> |
-            <%= link_to 'Edit profile', edit_user_registration_path %> |
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-
-          <% end %>
-        <% end %>
+  <% if current_user %>
+    <% if current_user.superadmin_role == TRUE %>
+    | <%= link_to "Admin Dashboard", rails_admin_path, :class => 'nav-link' %> |
+      <a href="/accounts">Manage Accounts</a>
+    <% else %>
+      <% if current_user.supervisor_role == TRUE %>
+      | <a href="/schedules">Manage Schedules</a>
+      <% end %>
     <% end %>
+    | <strong><%= current_user.email %></strong> |
+    <%= link_to 'Edit profile', edit_user_registration_path %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+  <% end %>
 
-    <%= yield %>
-  </body>
+  <%= yield %>
+</body>
 </html>
