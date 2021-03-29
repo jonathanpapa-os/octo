@@ -3,6 +3,7 @@ class CreateDefaultAccount < ActiveRecord::Migration[6.1]
     # Initialize first account:
     Account.create! do |u|
       u.slug     = 'admin'
+      u.email     = 'superadmin@octosched.com'
       u.name    = 'Superadmin'
       u.description = 'Superadmin access'
     end
