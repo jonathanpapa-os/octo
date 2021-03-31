@@ -24,6 +24,23 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+    # Additional code for mail_form
+    config.action_mailer_default_url_options = { host: 'localhost:3000' }
+    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = false
+    config.action_mailer.default charset: 'utf-8'
+    config.action_mailer.smtp_settings = {
+      address: 'smtp.gmail.com',
+      port: 587,
+      domain: 'gmail.com',
+      authentication: 'plain',
+      enable_starttls_auto: true,
+      user_name:  'johndoe111620@gmail.com',
+      password:   'Default2020!'
+  }
+
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 

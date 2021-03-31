@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'rails_admin', '~> 2.0'
 gem 'cancancan'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
