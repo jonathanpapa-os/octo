@@ -29,5 +29,23 @@
   <% end %>
 
   <%= yield %>
+
+  <%
+  if current_user
+    unless session[:display_welcome]
+      flash.now[:notice] = "Welcome back! " + current_user.email
+      session[:display_welcome] = true
+    end
+  end
+  %>
+
+  
+  <% if notice %>
+    <div class="alert alert_default alert-dismissible">
+      <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">&times;</a>
+      <%= notice %>
+    </div>
+  <% end %>
+
 </body>
 </html>
