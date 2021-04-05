@@ -33,7 +33,7 @@
   <%
   if current_user
     unless session[:display_welcome]
-      flash.now[:notice] = "Welcome back! " + current_user.email
+      flash.now[:notice] = "Welcome! " + current_user.email
       session[:display_welcome] = true
     end
   end
