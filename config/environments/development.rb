@@ -43,8 +43,8 @@ Rails.application.configure do
     domain: 'gmail.com',
     authentication: 'plain',
     enable_starttls_auto: true,
-    user_name:  ENV["GMAIL_EMAIL"],
-    password:   ENV["GMAIL_PASSWORD"]
+    user_name:  'johndoe111620@gmail.com',
+    password:   'Default2020!'
   }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
