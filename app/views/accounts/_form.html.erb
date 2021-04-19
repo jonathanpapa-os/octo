@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :slug %>
-    <%= form.text_field :slug, required: true %>
+    <label>Company Slug</label>
+    <%= form.text_field :slug, required: true%>
   </div>
 
   <div class="field">
-    <%= form.label :name, required: true %>
-    <%= form.text_field :name %>
+    <label>Company Name</label>
+    <%= form.text_field :name, required: true %>
   </div>
 
   <div class="field">
-    <%= form.label :description, required: true %>
-    <%= form.text_field :description %>
+    <label>Description</label>
+    <%= form.text_area :description, required: true, rows: 1 %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, :placeholder => "Can add later" %>
-  </div>
+    <div class="field">
+      <label>Email Address</label>
+      <%= form.text_field :email, :placeholder => "Can add later" %>
+    </div>
 
   <div class="actions">
     <%= form.submit %>
