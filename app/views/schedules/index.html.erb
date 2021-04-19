@@ -1,8 +1,7 @@
 <br><br>
-
 <% if current_user.superadmin_role == TRUE || current_user.email == @account.email %>
-  <h1><%= @account.slug %> page <br>
-  <br>
+  <a href="/accounts/<%= @account.id %>/edit"><%= @account.name %></a>
+  <br><br>
 
   <table class="center">
     <thead>

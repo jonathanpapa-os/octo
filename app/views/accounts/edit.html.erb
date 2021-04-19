@@ -1,14 +1,14 @@
 <br><br>
 
-<% if current_user.superadmin_role == TRUE %>
+<% if current_user.superadmin_role == TRUE || current_user.supervisor_role == TRUE %>
 
 <h1>Editing Account</h1>
 
 <%= render 'form', account: @account %>
-<%= link_to 'Back', accounts_path %>
+<a href="javascript:history.back()">Back</a>
 
 <% else %>
 
-  <%= link_to 'Book an appointment ', new_schedule_path %>
+<%= link_to 'Book an appointment ', new_schedule_path %>
 
 <% end %>

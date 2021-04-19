@@ -4,12 +4,12 @@
 <% if current_user.superadmin_role == TRUE %>
 
   <p>
-    <strong>Slug:</strong>
+    <strong>Company Slug:</strong>
     <%= @account.slug %>
   </p>
 
   <p>
-    <strong>Name:</strong>
+    <strong>Company Name:</strong>
     <%= @account.name %>
   </p>
 
@@ -24,15 +24,39 @@
   </p>
 
   <br>
-  <%= link_to 'Back', accounts_path %> |
-  <%= link_to 'Edit', edit_account_path(@account) %> |
+  <a href="javascript:history.back()">Back</a> |
   <input type="hidden" value="<%= @account.slug %>" id="slug">
+  <%= link_to 'Edit', edit_account_path(@account) %> |
   <button onclick="clickyClick()">Manage Account</button>
 
 <% else %>
 
-  <br><br>
-  <%= link_to 'Book an appointment', new_schedule_path %>
+  <% if current_user.supervisor_role == TRUE %>
+    <p>
+      <strong>Slug:</strong>
+      <%= @account.slug %>
+    </p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @account.name %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= @account.description %>
+    </p>
+
+    <br><br>
+    <a href="javascript:history.back()">Back</a> |
+    <%= link_to 'Book an appointment', new_schedule_path %>
+
+    <% else %>
+
+    <br><br>
+    <%= link_to 'Book an appointment', new_schedule_path %>
+
+  <% end %>
 
 <% end %>
 
