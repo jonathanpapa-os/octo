@@ -1,3 +1,4 @@
+<% content_for :title do %><%= @account.name %><% end %>
 <p id="notice"><%= notice %></p>
 
 <br>
@@ -36,7 +37,7 @@
   </p>
 
   <br>
-  <%= link_to 'Back', schedules_path %> |
+  <a href="javascript:history.back()">Back</a> |
   <%= link_to 'Reschedule', edit_schedule_path(@schedule) %> |
   <%= link_to 'Cancel Booking', @schedule, method: :delete, data: { confirm: 'Are you sure?' } %>
 

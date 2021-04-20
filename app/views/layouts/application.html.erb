@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sched</title>
+    <title><%= yield(:title) %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -20,12 +20,12 @@
       <a href="/accounts">Manage Accounts</a>
     <% else %>
       <% if current_user.supervisor_role == TRUE %>
-      | <a href="/schedules">Manage Schedules</a>
+      | <a href="/schedules">Manage Schedules</a> |
+      <a href="/accounts/<%= @account.id %>/edit">Edit Company</a> |
+      <%= link_to 'Edit profile', edit_user_registration_path %>
       <% end %>
     <% end %>
-    | <strong><%= current_user.email %></strong> |
-    <%= link_to 'Edit profile', edit_user_registration_path %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
   <% end %>
 
   <%= yield %>

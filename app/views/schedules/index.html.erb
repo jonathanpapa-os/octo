@@ -1,6 +1,7 @@
+<% content_for :title do %><%= @account.name %><% end %>
 <br><br>
 <% if current_user.superadmin_role == TRUE || current_user.email == @account.email %>
-  <a href="/accounts/<%= @account.id %>/edit"><%= @account.name %></a>
+  <%= @account.name %>
   <br><br>
 
   <table class="center">

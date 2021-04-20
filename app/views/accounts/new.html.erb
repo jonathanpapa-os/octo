@@ -1,9 +1,10 @@
-<% if current_user.superadmin_role == TRUE %>
+<% content_for :title do %>Create New Account<% end %><
+% if current_user.superadmin_role == TRUE %>
 
     <br><br>
     <h1>Create New Account</h1><br>
     <%= render 'form', account: @account %>
-    <%= link_to 'Back', accounts_path %>
+    <a href="javascript:history.back()">Back</a>
 
 <% else %>
 
