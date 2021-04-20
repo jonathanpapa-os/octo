@@ -11,25 +11,53 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <label>Company Slug</label>
-    <%= form.text_field :slug, required: true%>
-  </div>
-
-  <div class="field">
-    <label>Company Name</label>
-    <%= form.text_field :name, required: true %>
-  </div>
-
-  <div class="field">
-    <label>Description</label>
-    <%= form.text_area :description, required: true, rows: 1 %>
-  </div>
+  <% if current_user.superadmin_role == TRUE %>
 
     <div class="field">
-      <label>Email Address</label>
-      <%= form.text_field :email, :placeholder => "Can add later" %>
+      <label>Company Slug</label>
+      <%= form.text_field :slug, required: true %>
     </div>
+
+    <div class="field">
+      <label>Company Name</label>
+      <%= form.text_field :name, required: true %>
+    </div>
+
+    <div class="field">
+      <label>Description</label>
+      <%= form.text_area :description, required: true, rows: 1 %>
+    </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <%= form.text_field :email, :placeholder => "Can add later" %>
+      </div>
+
+  <% else %>
+    <% if current_user.supervisor_role == TRUE %>
+
+    <div class="field">
+      <label>Company Slug</label>
+      <%= form.text_field :slug, required: true, :readonly => true %>
+    </div>
+
+    <div class="field">
+      <label>Company Name</label>
+      <%= form.text_field :name, required: true %>
+    </div>
+
+    <div class="field">
+      <label>Description</label>
+      <%= form.text_area :description, required: true, rows: 1 %>
+    </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <%= form.text_field :email, :placeholder => "Can add later", :readonly => true %>
+      </div>
+
+    <% end %>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>
