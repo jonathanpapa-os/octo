@@ -21,7 +21,6 @@
     <% else %>
       <% if current_user.supervisor_role == TRUE %>
       | <a href="/schedules">Manage Schedules</a> |
-      <a href="/accounts/<%= @account.id %>/edit">Edit Company</a> |
       <%= link_to 'Edit profile', edit_user_registration_path %>
       <% end %>
     <% end %>
