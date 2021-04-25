@@ -20,10 +20,10 @@
       <a href="/accounts">Manage Accounts</a>
     <% else %>
       <% if current_user.supervisor_role == TRUE %>
-      | <a href="/schedules">Manage Schedules</a> |
-      <%= link_to 'Edit profile', edit_user_registration_path %>
+      | <a href="/schedules">Manage Schedules</a>
       <% end %>
     <% end %>
+    | <%= link_to 'Edit profile', edit_user_registration_path %>
     | <%= link_to "Logout", destroy_user_session_path, method: :delete %>
   <% end %>
 
@@ -32,7 +32,7 @@
   <%
   if current_user
     unless session[:display_welcome]
-      flash.now[:notice] = "Welcome! " + current_user.email
+      flash.now[:notice] = "Welcome! " + current_user.name
       session[:display_welcome] = true
     end
   end
