@@ -1,7 +1,8 @@
 <% content_for :title do %><%= @account.name %><% end %>
 <br><br>
 <% if current_user.superadmin_role == TRUE || current_user.email == @account.email %>
-  <%= @account.name %>
+  <%= @account.name %> |
+  <a href="/accounts/<%= @account.id %>/edit">Edit Company</a>
   <br><br>
 
   <table class="center">
@@ -26,7 +27,7 @@
           <td><%= schedule.birthday %></td>
           <td><%= schedule.address %></td>
           <td><%= schedule.email %></td>
-          <td><%= link_to 'Show Details', schedule %></td>
+          <td><%= link_to 'Show Details', schedule %> |</td>
           <td><%= link_to 'Cancel Booking', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
