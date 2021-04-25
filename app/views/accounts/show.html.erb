@@ -25,7 +25,7 @@
   </p>
 
   <br>
-  <a href="javascript:history.back()">Back</a> |
+  <%= link_to 'Back', accounts_path %> |
   <input type="hidden" value="<%= @account.slug %>" id="slug">
   <%= link_to 'Edit', edit_account_path(@account) %> |
   <button onclick="clickyClick()">Manage Account</button>

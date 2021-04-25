@@ -37,7 +37,7 @@
   </p>
 
   <br>
-  <a href="javascript:history.back()">Back</a> |
+  <%= link_to 'Back', accounts_path %>Back</a> |
   <%= link_to 'Reschedule', edit_schedule_path(@schedule) %> |
   <%= link_to 'Cancel Booking', @schedule, method: :delete, data: { confirm: 'Are you sure?' } %>
 
