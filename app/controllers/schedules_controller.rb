@@ -66,10 +66,10 @@ class SchedulesController < ApplicationController
     def set_schedule
       @schedule = Schedule.find_by!(id: params[:id], account_id: @account.id)
     end
- 
+
     # ...
- 
+
     def set_account
-      @account = Account.find_by!(slug: request.subdomain)
+      @account = Account.find_by!(email: current_user.email)
     end
 end

@@ -1,0 +1,1123 @@
+Started GET "/collections/article_ads" for ::1 at 2021-04-25 20:08:12 +0800
+  [1m[35m (40.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/collections/article_ads"):
+  
+Started GET "/" for ::1 at 2021-04-25 20:09:27 +0800
+Processing by SchedulesController#new as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms | Allocations: 1677)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-25 20:09:27 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 635)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 690.2ms | Allocations: 64258)
+Completed 200 OK in 716ms (Views: 694.2ms | ActiveRecord: 6.0ms | Allocations: 72925)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-25 20:09:32 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 12ms (ActiveRecord: 4.6ms | Allocations: 2028)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4109)
+Completed 200 OK in 302ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 5170)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-25 20:09:35 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 20ms (ActiveRecord: 4.8ms | Allocations: 1471)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4103)
+Completed 200 OK in 340ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4652)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-25 20:10:49 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 23ms (ActiveRecord: 7.2ms | Allocations: 1455)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4101)
+Completed 200 OK in 335ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 4652)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-25 20:10:53 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 20ms (ActiveRecord: 6.6ms | Allocations: 1471)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4103)
+Completed 200 OK in 338ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4654)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-25 20:10:58 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 220)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 147)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1872)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4904)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 6316)
+
+
+Started POST "/users" for ::1 at 2021-04-25 20:11:10 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jhn.knnth.prljs@gmail.com' LIMIT 1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 576)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2189)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5199)
+Completed 200 OK in 375ms (Views: 8.8ms | ActiveRecord: 3.3ms | Allocations: 12019)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-25 20:11:18 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4151)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 4755)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-25 20:11:23 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'jhn.knnth.prljs@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 331ms (ActiveRecord: 6.4ms | Allocations: 2897)
+
+
+Started GET "/" for ::1 at 2021-04-25 20:11:23 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (5.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 16ms (ActiveRecord: 9.5ms | Allocations: 3134)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-25 20:11:26 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 9ms (ActiveRecord: 3.0ms | Allocations: 2304)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-25 20:11:27 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (4.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 29ms (ActiveRecord: 12.2ms | Allocations: 2304)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-25 20:14:10 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (7.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 42ms (ActiveRecord: 16.0ms | Allocations: 2304)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-25 20:23:18 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.3ms | Allocations: 10467)
+
+
+  
+NoMethodError (undefined method `set_account' for #<SchedulesController:0x0000000000eb28>
+Did you mean?  set_trace_func):
+  
+activesupport (6.1.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.3) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.1) lib/puma/configuration.rb:247:in `call'
+puma (5.2.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.1) lib/puma/server.rb:431:in `process_client'
+puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-25 20:23:29 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 28ms (ActiveRecord: 11.4ms | Allocations: 8938)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/schedules" for ::1 at 2021-04-25 20:23:58 +0800
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 8ms (ActiveRecord: 2.8ms | Allocations: 2304)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/schedules" for ::1 at 2021-04-25 20:24:42 +0800
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (6.6ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 35ms (ActiveRecord: 14.7ms | Allocations: 2304)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (77.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS `octo_development`[0m
+  [1m[35m (8.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS `octo_test`[0m
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE DATABASE `octo_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE DATABASE `octo_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (29.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('1918230513352316940', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAccounts (20210217073019)
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE TABLE `accounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `slug` varchar(255), `name` varchar(255), `description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217073019')[0m
+  [1m[36mTRANSACTION (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20210217074315)
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (38.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217074315')[0m
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSchedules (20210217082814)
+  [1m[35m (31.7ms)[0m  [1m[35mCREATE TABLE `schedules` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `gender` varchar(255), `phone` varchar(255), `birthday` varchar(255), `address` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217082814')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAccountidToSchedules (20210217083041)
+  [1m[35m (46.5ms)[0m  [1m[35mALTER TABLE `schedules` ADD `account_id` varchar(255) AFTER `id`[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217083041')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRolesToUsers (20210225031359)
+  [1m[35m (27.6ms)[0m  [1m[35mALTER TABLE `users` ADD `superadmin_role` tinyint(1) DEFAULT FALSE[0m
+  [1m[35m (27.2ms)[0m  [1m[35mALTER TABLE `users` ADD `supervisor_role` tinyint(1) DEFAULT FALSE[0m
+  [1m[35m (24.4ms)[0m  [1m[35mALTER TABLE `users` ADD `user_role` tinyint(1) DEFAULT TRUE[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210225031359')[0m
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20210225031510)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'superadmin@octosched.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `superadmin_role`) VALUES ('superadmin@octosched.com', '$2a$12$ja3zI9OofCJrwx5m4SguleNM7zq4LzfZ5h4Yz9aoyWutzRiPJcx2O', '2021-04-27 09:31:36.759122', '2021-04-27 09:31:36.759122', TRUE)[0m
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210225031510')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDefaultAccount (20210315065050)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.8ms)[0m  [1m[32mINSERT INTO `accounts` (`slug`, `name`, `description`, `created_at`, `updated_at`) VALUES ('admin', 'Superadmin', 'Superadmin access', '2021-04-27 09:31:36.800886', '2021-04-27 09:31:36.800886')[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210315065050')[0m
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAssignedUsersToAccounts (20210318072227)
+  [1m[35m (61.1ms)[0m  [1m[35mALTER TABLE `accounts` ADD `email` varchar(255) AFTER `id`[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210318072227')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20210425145511)
+  [1m[35m (130.8ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255) NOT NULL AFTER `email`[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210425145511')[0m
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-04-27 09:31:37.065603', '2021-04-27 09:31:37.065603')[0m
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1918230513352316940')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-04-27 17:31:50 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 31ms (ActiveRecord: 8.3ms | Allocations: 4505)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-27 17:31:50 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 643)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 2941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.4ms | Allocations: 49677)
+Completed 200 OK in 214ms (Views: 201.3ms | ActiveRecord: 0.0ms | Allocations: 58116)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-27 17:31:51 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1077)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4147)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 4774)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-27 17:31:54 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 17ms (ActiveRecord: 5.5ms | Allocations: 1601)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1069)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 4104)
+Completed 200 OK in 325ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 5175)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-27 17:31:57 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 14ms (ActiveRecord: 5.5ms | Allocations: 1472)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 4100)
+Completed 200 OK in 329ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4660)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-27 17:32:01 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@andovercg.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 20ms (ActiveRecord: 5.0ms | Allocations: 1473)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@andovercg.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 165)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4100)
+Completed 200 OK in 345ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 4658)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-04-27 17:32:03 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.8ms | Allocations: 221)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 147)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5184)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 6616)
+
+
+Started POST "/users" for ::1 at 2021-04-27 17:32:22 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"john kenneth paralejas", "email"=>"jhn.knnth.prljs@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'jhn.knnth.prljs@gmail.com' LIMIT 1[0m
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `name`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('jhn.knnth.prljs@gmail.com', 'john kenneth paralejas', '$2a$12$FtMpF5d80JDqxLmCgjbnyeRmcX5JIkdcQ8ztpcAImRfpQZ8DOkv5y', '2021-04-27 09:32:23.045398', '2021-04-27 09:32:23.045398')[0m
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 375ms (ActiveRecord: 14.6ms | Allocations: 10508)
+
+
+Started GET "/" for ::1 at 2021-04-27 17:32:23 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 11ms (ActiveRecord: 4.4ms | Allocations: 3133)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/users/sign_up" for ::1 at 2021-04-27 17:33:22 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 7.5ms | Allocations: 1695)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-27 17:33:23 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 7.3ms | Allocations: 1463)
+
+
+Started GET "/" for ::1 at 2021-04-27 17:33:48 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (6.1ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 32ms (ActiveRecord: 13.1ms | Allocations: 2341)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:33:50 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 10ms (ActiveRecord: 3.1ms | Allocations: 2328)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/xml_pages" for ::1 at 2021-04-27 17:33:52 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/xml_pages"):
+  
+Started GET "/collections/article_ads" for ::1 at 2021-04-27 17:33:53 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/collections/article_ads"):
+  
+Started GET "/" for ::1 at 2021-04-27 17:33:56 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 8ms (ActiveRecord: 2.9ms | Allocations: 2338)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:33:57 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 6ms (ActiveRecord: 2.5ms | Allocations: 2319)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:35:30 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 37ms (ActiveRecord: 9.2ms | Allocations: 11612)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/sign_out" for ::1 at 2021-04-27 17:35:36 +0800
+  
+ActionController::RoutingError (No route matches [GET] "/sign_out"):
+  
+Started GET "/" for ::1 at 2021-04-27 17:35:40 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (2.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 16ms (ActiveRecord: 5.2ms | Allocations: 2516)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (62.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `octo_development`[0m
+  [1m[35m (9.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `octo_test`[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE DATABASE `octo_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE DATABASE `octo_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (26.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT GET_LOCK('1918230513352316940', 0)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateAccounts (20210217073019)
+  [1m[35m (63.3ms)[0m  [1m[35mCREATE TABLE `accounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `slug` varchar(255), `name` varchar(255), `description` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217073019')[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20210217074315)
+  [1m[35m (36.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (33.2ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token` ON `users` (`reset_password_token`)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217074315')[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSchedules (20210217082814)
+  [1m[35m (28.2ms)[0m  [1m[35mCREATE TABLE `schedules` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `gender` varchar(255), `phone` varchar(255), `birthday` varchar(255), `address` varchar(255), `email` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217082814')[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAccountidToSchedules (20210217083041)
+  [1m[35m (56.7ms)[0m  [1m[35mALTER TABLE `schedules` ADD `account_id` varchar(255) AFTER `id`[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210217083041')[0m
+  [1m[36mTRANSACTION (4.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddRolesToUsers (20210225031359)
+  [1m[35m (23.1ms)[0m  [1m[35mALTER TABLE `users` ADD `superadmin_role` tinyint(1) DEFAULT FALSE[0m
+  [1m[35m (19.5ms)[0m  [1m[35mALTER TABLE `users` ADD `supervisor_role` tinyint(1) DEFAULT FALSE[0m
+  [1m[35m (21.9ms)[0m  [1m[35mALTER TABLE `users` ADD `user_role` tinyint(1) DEFAULT TRUE[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210225031359')[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20210225031510)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'superadmin@octosched.com' LIMIT 1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`, `superadmin_role`) VALUES ('superadmin@octosched.com', '$2a$12$E1nkmdiclCCynuz3YmMIZuDEwwGRE8p42h8HmiJXMCAhajSfIaKje', '2021-04-27 09:36:11.892278', '2021-04-27 09:36:11.892278', TRUE)[0m
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210225031510')[0m
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDefaultAccount (20210315065050)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Create (0.9ms)[0m  [1m[32mINSERT INTO `accounts` (`slug`, `name`, `description`, `created_at`, `updated_at`) VALUES ('admin', 'Superadmin', 'Superadmin access', '2021-04-27 09:36:11.919950', '2021-04-27 09:36:11.919950')[0m
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210315065050')[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAssignedUsersToAccounts (20210318072227)
+  [1m[35m (116.2ms)[0m  [1m[35mALTER TABLE `accounts` ADD `email` varchar(255) AFTER `id`[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210318072227')[0m
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20210425145511)
+  [1m[35m (141.1ms)[0m  [1m[35mALTER TABLE `users` ADD `name` varchar(255) NOT NULL AFTER `email`[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210425145511')[0m
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-04-27 09:36:12.239331', '2021-04-27 09:36:12.239331')[0m
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1918230513352316940')[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-04-27 17:36:18 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 401 Unauthorized in 32ms (ActiveRecord: 10.5ms | Allocations: 4518)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-04-27 17:36:18 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.0ms | Allocations: 643)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 138.1ms | Allocations: 49415)
+Completed 200 OK in 159ms (Views: 145.0ms | ActiveRecord: 0.0ms | Allocations: 57856)
+
+
+Started POST "/users/sign_in" for ::1 at 2021-04-27 17:36:38 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"superadmin@octosched.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'superadmin@octosched.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE `users` SET `users`.`remember_created_at` = '2021-04-27 09:36:38', `users`.`updated_at` = '2021-04-27 09:36:38.460826' WHERE `users`.`id` = 1[0m
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 359ms (ActiveRecord: 15.3ms | Allocations: 8869)
+
+
+Started GET "/" for ::1 at 2021-04-27 17:36:38 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.6ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 13ms (ActiveRecord: 5.4ms | Allocations: 3116)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:43:31 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (4.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 38ms (ActiveRecord: 14.3ms | Allocations: 2770)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:43:32 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (3.2ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = '' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 18ms (ActiveRecord: 6.1ms | Allocations: 2328)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/users/sign_in" for ::1 at 2021-04-27 17:43:33 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 3.1ms | Allocations: 1525)
+
+
+Started GET "/" for ::1 at 2021-04-27 17:48:20 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 36ms (ActiveRecord: 13.7ms | Allocations: 11233)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'={:slug=>""}):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:48:39 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 29ms (ActiveRecord: 11.4ms | Allocations: 10388)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'={:slug=>""}):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:49:33 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 36ms (ActiveRecord: 15.0ms | Allocations: 10366)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'={:slug=>[]}):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:49:38 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 30ms (ActiveRecord: 12.1ms | Allocations: 10388)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'={:slug=>""}):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:49:56 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.4ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 36ms (ActiveRecord: 13.8ms | Allocations: 10393)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'={:slug=>"something"}):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:50:04 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`slug` = 'something' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+Completed 404 Not Found in 26ms (ActiveRecord: 10.4ms | Allocations: 9362)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account):
+  
+app/controllers/schedules_controller.rb:73:in `set_account'
+Started GET "/" for ::1 at 2021-04-27 17:50:39 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.1ms | Allocations: 10829)
+
+
+  
+NoMethodError (undefined method `set_account' for #<SchedulesController:0x000000000195c8>
+Did you mean?  set_trace_func):
+  
+activesupport (6.1.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.3) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.1) lib/puma/configuration.rb:247:in `call'
+puma (5.2.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.1) lib/puma/server.rb:431:in `process_client'
+puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-27 17:53:53 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 13.4ms | Allocations: 10820)
+
+
+  
+NoMethodError (undefined method `set_account' for #<SchedulesController:0x0000000001b418>
+Did you mean?  set_trace_func):
+  
+activesupport (6.1.3) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+activesupport (6.1.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `block in invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `each'
+activesupport (6.1.3) lib/active_support/callbacks.rb:512:in `invoke_before'
+activesupport (6.1.3) lib/active_support/callbacks.rb:115:in `block in run_callbacks'
+actiontext (6.1.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (6.1.3) lib/action_text/engine.rb:55:in `block (4 levels) in <class:Engine>'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `instance_exec'
+activesupport (6.1.3) lib/active_support/callbacks.rb:126:in `block in run_callbacks'
+activesupport (6.1.3) lib/active_support/callbacks.rb:137:in `run_callbacks'
+actionpack (6.1.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `block in instrument'
+activesupport (6.1.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.1.3) lib/active_support/notifications.rb:203:in `instrument'
+actionpack (6.1.3) lib/action_controller/metal/instrumentation.rb:33:in `process_action'
+actionpack (6.1.3) lib/action_controller/metal/params_wrapper.rb:249:in `process_action'
+activerecord (6.1.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.1.3) lib/abstract_controller/base.rb:165:in `process'
+actionview (6.1.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.3) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-mini-profiler (2.3.1) lib/mini_profiler/profiler.rb:373:in `call'
+webpacker (5.2.1) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.1.3) lib/rails/engine.rb:539:in `call'
+puma (5.2.1) lib/puma/configuration.rb:247:in `call'
+puma (5.2.1) lib/puma/request.rb:76:in `block in handle_request'
+puma (5.2.1) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
+puma (5.2.1) lib/puma/request.rb:75:in `handle_request'
+puma (5.2.1) lib/puma/server.rb:431:in `process_client'
+puma (5.2.1) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-27 17:54:13 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering schedules/new.html.erb within layouts/application
+  Rendered schedules/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1757)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1821)
+Completed 500 Internal Server Error in 158ms (ActiveRecord: 27.1ms | Allocations: 16567)
+
+
+  
+ActionView::Template::Error (undefined method `slug' for nil:NilClass):
+    3: <p id="notice"><%= notice %></p>
+    4: <br><br>
+    5: 
+    6: <% if @account.slug == "admin" %>
+    7: 
+    8:     <h1>Go to specific slug of the Company</h1>    
+    9: 
+  
+app/views/schedules/new.html.erb:6
+Started GET "/" for ::1 at 2021-04-27 17:55:04 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering schedules/new.html.erb within layouts/application
+  Rendered schedules/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1736)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1800)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.1ms | Allocations: 4326)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+     9: 
+    10: <%# <% else %> %>
+    11: 
+    12:     <h1><%= @account.name %> page</h1><br>
+    13:     <h1>BOOK AN APPOINTMENT NOW! </h1><br>
+    14:     <%= render 'form', schedule: @schedule %>
+    15: 
+  
+app/views/schedules/new.html.erb:12
+Started GET "/" for ::1 at 2021-04-27 17:55:21 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering schedules/new.html.erb within layouts/application
+  Rendered schedules/_form.html.erb (Duration: 95.9ms | Allocations: 8033)
+  Rendered schedules/new.html.erb within layouts/application (Duration: 101.1ms | Allocations: 8487)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 8551)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 7.1ms | Allocations: 11077)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    50:   </div>
+    51: 
+    52:   <div class="field">
+    53:   <%= form.hidden_field :account_id, value: @account.id %>
+    54:   </div>
+    55: 
+    56:   <div class="actions">
+  
+app/views/schedules/_form.html.erb:53
+app/views/schedules/_form.html.erb:1
+app/views/schedules/new.html.erb:14
+Started GET "/" for ::1 at 2021-04-27 18:01:00 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.2ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`email` = 'superadmin@octosched.com' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering schedules/new.html.erb within layouts/application
+  Rendered schedules/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 265)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3908)
+Completed 200 OK in 78ms (Views: 9.2ms | ActiveRecord: 22.8ms | Allocations: 22431)
+
+
+Started GET "/" for ::1 at 2021-04-27 18:09:16 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.3ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`email` = 'superadmin@octosched.com' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering schedules/new.html.erb within layouts/application
+  Rendered schedules/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3747)
+Completed 200 OK in 50ms (Views: 10.4ms | ActiveRecord: 3.4ms | Allocations: 20862)
+
+
+Started GET "/" for ::1 at 2021-04-27 18:10:30 +0800
+Processing by SchedulesController#new as HTML
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mAccount Load (1.5ms)[0m  [1m[34mSELECT `accounts`.* FROM `accounts` WHERE `accounts`.`email` = 'superadmin@octosched.com' LIMIT 1[0m
+  ↳ app/controllers/schedules_controller.rb:73:in `set_account'
+  Rendering layout layouts/application.html.erb
+  Rendering schedules/new.html.erb within layouts/application
+  Rendered schedules/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 72)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3135)
+Completed 200 OK in 26ms (Views: 10.1ms | ActiveRecord: 6.5ms | Allocations: 5310)
+
+
