@@ -32,13 +32,24 @@
   <%
   if current_user
     unless session[:display_welcome]
-      flash.now[:notice] = "Welcome! " + current_user.name
+      flash.now[:notice] = "Welcome! " + current_user.email
       session[:display_welcome] = true
     end
   end
   %>
 
-  
+  <%
+  if current_user
+    unless session[:signed_up]
+      flash.now[:notice] = "You successfully signed up! " + current_user.email
+      session[:signed_up] = true
+    end
+  end
+  %>
+
+
+
+
   <% if notice %>
     <div class="alert alert_default alert-dismissible">
       <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">&times;</a>
