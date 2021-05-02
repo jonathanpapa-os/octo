@@ -28,6 +28,13 @@
 
   <% end %>
 
+  <% if !flash[:alert].blank? %>
+     <div class="alert alert_default alert-dismissible">
+       <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">×</a>
+       <%= flash[:alert]%>
+     </div>
+ <% end %>
+
   <%= render "devise/shared/links" %>
 
 </div>
