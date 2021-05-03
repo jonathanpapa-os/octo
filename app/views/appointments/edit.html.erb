@@ -1,0 +1,15 @@
+<% content_for :title do %>Edit Appointment<% end %>
+<br><br>
+    
+<% if current_user.superadmin_role == TRUE ||  current_user.supervisor_role == TRUE %>
+    
+    <h1>Editing Appointment</h1>
+    <br>
+        
+    <%= render 'form2', appointment: @appointment %>
+    
+<% else %>
+    
+      <%= link_to 'Book an appointment ', new_schedule_path %>
+    
+<% end %>

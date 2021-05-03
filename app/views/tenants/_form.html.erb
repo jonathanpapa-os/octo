@@ -1,10 +1,10 @@
-<%= form_with(model: account) do |form| %>
-  <% if account.errors.any? %>
+<%= form_with(model: tenant) do |form| %>
+  <% if tenant.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+      <h2><%= pluralize(tenant.errors.count, "error") %> prohibited this tenant from being saved:</h2>
 
       <ul>
-        <% account.errors.each do |error| %>
+        <% tenant.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -15,17 +15,17 @@
 
     <div class="field">
       <label>Company Slug</label>
-      <%= form.text_field :slug, required: true %>
+      <%= form.text_field :url, required: true %>
     </div>
 
     <div class="field">
       <label>Company Name</label>
-      <%= form.text_field :name, required: true %>
+      <%= form.text_field :company_name, required: true %>
     </div>
 
     <div class="field">
       <label>Description</label>
-      <%= form.text_area :description, required: true, rows: 1 %>
+      <%= form.text_area :company_description, required: true, rows: 1 %>
     </div>
 
       <div class="field">
@@ -38,17 +38,17 @@
 
     <div class="field">
       <label>Company Slug</label>
-      <%= form.text_field :slug, required: true, :readonly => true %>
+      <%= form.text_field :url, required: true, :readonly => true %>
     </div>
 
     <div class="field">
       <label>Company Name</label>
-      <%= form.text_field :name, required: true %>
+      <%= form.text_field :company_name, required: true %>
     </div>
 
     <div class="field">
       <label>Description</label>
-      <%= form.text_area :description, required: true, rows: 1 %>
+      <%= form.text_area :company_description, required: true, rows: 1 %>
     </div>
 
       <div class="field">

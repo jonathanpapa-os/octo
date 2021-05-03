@@ -1,6 +1,6 @@
-class CreateSchedules < ActiveRecord::Migration[6.1]
+class CreateAppointments < ActiveRecord::Migration[6.1]
   def change
-    create_table :schedules do |t|
+    create_table :appointments do |t|
       t.string :name
       t.string :gender
       t.string :phone

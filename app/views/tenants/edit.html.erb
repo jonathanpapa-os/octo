@@ -3,13 +3,13 @@
 
 <% if current_user.superadmin_role == TRUE || current_user.supervisor_role == TRUE %>
 
-<h1>Editing Account</h1>
+<h1>Editing Tenant</h1>
 
-<%= render 'form', account: @account %>
+<%= render 'form', tenant: @tenant %>
 <a href="javascript:history.back()">Back</a>
 
 <% else %>
 
-<%= link_to 'Book an appointment ', new_schedule_path %>
+<%= link_to 'Book an appointment', new_appointment_path %>
 
 <% end %>

@@ -1,16 +1,16 @@
 <% content_for :title do %>Book Now!<% end %>
-
 <p id="notice"><%= notice %></p>
-<br><br>
+<br>
 
-<% if @account.slug == "admin" %>
-
+<% if @tenant.url == "admin" %>
+    
     <h1>Go to specific slug of the Company</h1>
-
+    
 <% else %>
-
-    <h1><%= @account.name %> page</h1><br>
+    
+    <h1><%= @tenant.company_name %> page</h1><br>
     <h1>BOOK AN APPOINTMENT NOW! </h1><br>
-    <%= render 'form', schedule: @schedule %>
-
+    <%= render 'form', appointment: @appointment %>
+    
 <% end %>
+    

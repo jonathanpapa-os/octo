@@ -1,0 +1,86 @@
+<% content_for :title do %><%= @tenant.company_name %><% end %>
+<p id="notice"><%= notice %></p>
+<br>
+
+<% if current_user.superadmin_role == TRUE ||  current_user.supervisor_role == TRUE %>
+
+  <h1><%= @tenant.url %> page</h1><br>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @appointment.name %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= @appointment.gender %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @appointment.phone %>
+  </p>
+
+  <p>
+    <strong>Birthday:</strong>
+    <%= @appointment.birthday %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @appointment.address %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @appointment.email %>
+  </p>
+
+  <br>
+  <%= link_to 'Back', appointments_path %> |
+  <%= link_to 'Reschedule', edit_appointment_path(@appointment) %> |
+  <%= link_to 'Cancel Booking', @appointment, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% else %>
+
+  <br>
+
+  <h1><%= @tenant.url %> page</h1><br>
+
+  <h1>Hi <%= @appointment.name %>, Thanks for booking!</h1><br>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @appointment.name %>
+  </p>
+
+  <p>
+    <strong>Gender:</strong>
+    <%= @appointment.gender %>
+  </p>
+
+  <p>
+    <strong>Phone:</strong>
+    <%= @appointment.phone %>
+  </p>
+
+  <p>
+    <strong>Birthday:</strong>
+    <%= @appointment.birthday %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @appointment.address %>
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= @appointment.email %>
+  </p>
+
+  <br>
+
+    <%= link_to 'Book Another', new_appointment_path %>
+
+<% end %>

@@ -1,0 +1,74 @@
+<% content_for :title do %><%= @tenant.company_name %><% end %>
+<p id="notice"><%= notice %></p>
+<br><br>
+    
+<% if current_user.superadmin_role == TRUE %>
+    
+    <p>
+      <strong>Url:</strong>
+      <%= @tenant.url %>
+    </p>
+    
+    <p>
+      <strong>Company Name:</strong>
+      <%= @tenant.company_name %>
+    </p>
+    
+    <p>
+      <strong>Description:</strong>
+      <%= @tenant.company_description %>
+    </p>
+    
+    <p>
+      <strong>Email:</strong>
+      <%= @tenant.email %>
+    </p>
+    
+    <br>
+
+    <%= link_to 'Back', tenants_path %> |
+    <%= link_to 'Edit', edit_tenant_path(@tenant) %>  |
+    <input type="hidden" value="<%= @tenant.url %>" id="url">
+    <button onclick="clickyClick()">Manage Tenant</button>
+    
+<% else %>
+    
+    <% if current_user.supervisor_role == TRUE %>
+      <p>
+        <strong>Url:</strong>
+        <%= @tenant.url %>
+      </p>
+        
+      <p>
+        <strong>Name:</strong>
+        <%= @tenant.company_name %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @tenant.company_description %>
+      </p>
+        
+      <p>
+        <strong>Email:</strong>
+        <%= @tenant.email %>
+      </p>
+        
+      <br><br>
+      <%= link_to 'Book an appointment', new_tenant_path %>
+    
+    <% else %>
+    
+      <br><br>
+      <%= link_to 'Book an appointment', new_tenant_path %>
+    
+    <% end %>
+<% end %>
+    
+<script type="text/javascript">
+    function clickyClick() {
+    url =  'http://' + document.getElementById("url").value + '.' + 'localhost:3000' + "/appointments"
+    window.open(url);
+    }
+</script>
+    

@@ -1,0 +1,38 @@
+<%= form_with(model: appointment) do |form| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+        <% appointment.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>Set New Date and Time</p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email,:readonly => true %>
+  </div>
+
+  <div class="field">
+    <br>
+    <p>Should be <b><i>'Date & Time and Optional Message field'</i></b> (Is there anything you want to tell the Client?) </p>
+  </div>
+
+  <div class="field">
+  <%= form.hidden_field :tenant_id, value: @tenant.id %>
+  </div>
+
+<br>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

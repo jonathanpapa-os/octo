@@ -1,0 +1,41 @@
+<% content_for :title do %>Manage Tenants<% end %>
+  <p id="notice"><%= notice %></p>
+  <br><br>
+
+<% if current_user.superadmin_role == TRUE %>
+  <h1>Tenants page</h1>
+
+  <table>
+    <thead>
+        <tr>
+        <th>Url</th>
+        <th>Company Name</th>
+        <th>Company Description</th>
+        <th>Email</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @tenants.each do |tenant| %>
+        <tr>
+          <td><%= tenant.url %></td>
+          <td><%= tenant.company_name %></td>
+          <td><%= tenant.company_description %></td>
+          <td><%= tenant.email %></td>
+          <td><%= link_to 'Show', tenant %> |</td>
+          <td><%= link_to 'Edit', edit_tenant_path(tenant) %> |</td>
+          <td><%= link_to 'Destroy', tenant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <%= link_to 'Create New Account', new_tenant_path %>
+
+<% else %>
+
+  <br>
+  <%= link_to 'Book an appointment', new_appointment_path %>
+
+<% end %>

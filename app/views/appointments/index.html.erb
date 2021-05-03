@@ -1,0 +1,58 @@
+<% content_for :title do %><%= @tenant.company_name %><% end %>
+<p id="notice"><%= notice %></p>
+
+<br><br>
+<% if current_user.superadmin_role == TRUE || current_user.email == @tenant.email %>
+  <%= @tenant.company_name %> |
+  <a href="/tenants/<%= @tenant.id %>/edit">Edit Company</a>
+  <br><br>
+
+  <h1>Appointments</h1>
+  
+  <table class="center">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Birthday</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @appointments.each do |appointment| %>
+        <tr>
+          <td><%= appointment.name %></td>
+          <td><%= appointment.gender %></td>
+          <td><%= appointment.phone %></td>
+          <td><%= appointment.birthday %></td>
+          <td><%= appointment.address %></td>
+          <td><%= appointment.email %></td>
+          <td><%= link_to 'Show Details', appointment %> |</td>
+          <td><%= link_to 'Cancel Booking', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <%= link_to 'Book an appointment', new_appointment_path %>
+  
+<% else %>
+  
+  <% if @tenant.url == "admin" %>
+  
+    <h1>Welcome to Paralejas Consulting</h1><br>
+    <h1>Go to specific slug!</h1>    
+  
+  <% else %>
+  
+    <h1><%= @tenant.url %> user page</h1>
+    <h1>Go to specific slug!</h1>   
+    <br>
+    <%= link_to 'Book an appointment!', new_appointment_path %>
+  
+  <% end %>
+<% end %>

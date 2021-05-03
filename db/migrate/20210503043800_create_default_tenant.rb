@@ -1,10 +1,10 @@
-class CreateDefaultAccount < ActiveRecord::Migration[6.1]
+class CreateDefaultTenant < ActiveRecord::Migration[6.1]
   def self.up
     # Initialize first account:
-    Account.create! do |u|
-      u.slug     = 'admin'
-      u.name    = 'Superadmin'
-      u.description = 'Superadmin access'
+    Tenant.create! do |u|
+      u.url     = 'admin'
+      u.company_name    = 'Superadmin'
+      u.company_description = 'Superadmin access'
     end
   end
 
