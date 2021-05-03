@@ -32,7 +32,7 @@
         <div class="flex-shrink-0 flex items-center">
           <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"> -->
 
-          <%= link_to 'Octo Sched', new_schedule_path, class:"font-black text-white w-auto"%>
+          <%= link_to 'Octo Sched', new_appointment_path, class:"font-black text-white w-auto"%>
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
@@ -41,10 +41,10 @@
             <% if current_user %>
               <% if current_user.superadmin_role == TRUE %>
                <%= link_to "Admin Dashboard", rails_admin_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium', target: :_blank %>
-               <%= link_to "Manage Accounts", accounts_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
+               <%= link_to "Manage Tenants", tenants_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
               <% else %>
                 <% if current_user.supervisor_role == TRUE %>
-                <%= link_to "Manage Schedules", schedules_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
+                <%= link_to "Manage Appointments", appointments_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
                 <% end %>
               <% end %>
                <%= link_to 'Edit profile', edit_user_registration_path, class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>

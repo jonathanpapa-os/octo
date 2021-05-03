@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  resources :tenants
+  resources :appointments
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   
   constraints subdomain: /.*/ do
-  resources :schedules
   end
 
-  resources :accounts
 
   devise_for :users
 
@@ -14,5 +14,5 @@ Rails.application.routes.draw do
  end
  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "schedules#new"
+  root to: "appointments#new"
 end
