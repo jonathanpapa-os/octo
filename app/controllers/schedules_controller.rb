@@ -70,6 +70,6 @@ class SchedulesController < ApplicationController
     # ...
 
     def set_account
-      @account = Account.find_by!(email: current_user.email)
+      @account = Account.find_by!(slug: request.subdomain)
     end
 end
