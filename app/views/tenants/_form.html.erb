@@ -14,7 +14,7 @@
   <% if current_user.superadmin_role == TRUE %>
 
     <div class="field">
-      <label>Company Slug</label>
+      <label>Company Url</label>
       <%= form.text_field :url, required: true %>
     </div>
 
@@ -37,7 +37,7 @@
     <% if current_user.supervisor_role == TRUE %>
 
     <div class="field">
-      <label>Company Slug</label>
+      <label>Company Url</label>
       <%= form.text_field :url, required: true, :readonly => true %>
     </div>
 
