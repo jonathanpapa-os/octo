@@ -125,7 +125,7 @@ nav ul li a.active {
 .dialog .title:first-child {
     margin-top: -4px;
 }
-.alert {
+.alert, #error_explanation {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -140,7 +140,7 @@ nav ul li a.active {
   -o-animation: fadein 500ms; /* Opera */
 }
 
-.alert_default{
+.alert_default, #error_explanation {
   color: #565656;
   background-color: #ffffff;
   border-color: #ffffff;
