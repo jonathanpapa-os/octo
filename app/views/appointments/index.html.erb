@@ -3,8 +3,7 @@
 
 <br><br>
 <% if current_user.superadmin_role == TRUE || current_user.email == @tenant.email %>
-  <%= @tenant.company_name %> |
-  <a href="/tenants/<%= @tenant.id %>/edit">Edit Company</a>
+  <%= @tenant.company_name %>
   <br><br>
 
   <h1>Appointments</h1>
