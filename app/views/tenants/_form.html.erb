@@ -14,11 +14,6 @@
   <% if current_user.superadmin_role == TRUE %>
 
     <div class="field">
-      <label>Company Url</label>
-      <%= form.text_field :url, required: true %>
-    </div>
-
-    <div class="field">
       <label>Company Name</label>
       <%= form.text_field :company_name, required: true %>
     </div>
@@ -28,20 +23,42 @@
       <%= form.text_area :company_description, required: true, rows: 1 %>
     </div>
 
-      <div class="field">
-        <label>Email Address</label>
-        <%= form.text_field :email, :placeholder => "Can add later" %>
-      </div>
+    <div class="field">
+      <label>Customize Your Booking Page URL</label>
+      <input type="text" placeholder="https://" readonly>
+      <span></span><%= form.text_field :url, required: true %>
+      <input type="text" placeholder=".localhost:3000" readonly>
+    </div>
+
+    <div class="field">
+      <label>Name</label>
+      <%= form.text_field :name, autofocus: true, autocomplete: "name" %>
+    </div>
+
+    <div class="field">
+      <label>Email Address</label>
+      <%= form.text_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <label>Password</label>
+      <% if @minimum_password_length %>
+      <em class="float-left mt-4">(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= form.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <label>Password Confirmation</label>
+      <%= form.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <%= link_to 'Octo Sched', new_appointment_path, class:"font-black text-white w-auto"%>
 
   <% else %>
     <% if current_user.supervisor_role == TRUE %>
 
     <div class="field">
-      <label>Company Url</label>
-      <%= form.text_field :url, required: true, :readonly => true %>
-    </div>
-
-    <div class="field">
       <label>Company Name</label>
       <%= form.text_field :company_name, required: true %>
     </div>
@@ -51,15 +68,22 @@
       <%= form.text_area :company_description, required: true, rows: 1 %>
     </div>
 
-      <div class="field">
-        <label>Email Address</label>
-        <%= form.text_field :email, :placeholder => "Can add later", :readonly => true %>
-      </div>
+    <div class="field">
+      <label>Customize Your Booking Page URL</label>
+      <span>https://</span><%= form.text_field :url, required: true %><span>.localhost:3000</span>
+    </div>
+
+    <div class="field">
+      <label>Email Address</label>
+      <%= form.text_field :email, :placeholder => "Can add later", :readonly => true %>
+    </div>
 
     <% end %>
   <% end %>
 
+  <br><br>
+
   <div class="actions">
-    <%= form.submit %>
+    <b><%= form.submit %></b>
   </div>
 <% end %>
