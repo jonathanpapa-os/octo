@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_05_04_025428) do
 
-  create_table "appointments", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  create_table "appointments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "company_name"
     t.string "name"
     t.string "gender"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_05_04_025428) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "tenants", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  create_table "tenants", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email"
     t.string "url"
     t.string "company_name"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_05_04_025428) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "name", null: false
     t.boolean "superadmin_role", default: false

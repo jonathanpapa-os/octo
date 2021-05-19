@@ -98,24 +98,24 @@
   </div>
 </nav>
 
-  <%= yield %>
-
-  <%
-  if user_signed_in?
-    unless session[:display_welcome]
-      flash.now[:notice] = "Welcome! " + current_user.name
-      session[:display_welcome] = true
-    end
+<%
+if user_signed_in?
+  unless session[:display_welcome]
+    flash.now[:notice] = "Welcome! " + current_user.name
+    session[:display_welcome] = true
   end
-  %>
+end
+%>
 
 
-  <% if notice %>
-    <div class="alert alert_default alert-dismissible">
-      <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">&times;</a>
-      <%= notice %>
-    </div>
-  <% end %>
+<% if notice %>
+  <div class="text-center alert alert_default alert-dismissible">
+    <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">&times;</a>
+    <%= notice %>
+  </div>
+<% end %>
+
+  <%= yield %>
 
 </body>
 </html>

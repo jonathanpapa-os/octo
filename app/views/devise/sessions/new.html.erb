@@ -1,7 +1,7 @@
 <% content_for :title do %>Login<% end %>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-<div class="w-full p-8 flex justify-center font-sans">
+<div class="w-full p-8 mt-5 flex justify-center font-sans">
 
 <div class="rounded bg-white w-80 p-4">
     <div class="flex justify-between py-1">
@@ -22,7 +22,7 @@
     <% end %>
 
     <div class="actions mb-4">
-      <%= f.submit "Log in",class: "bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-full" %>
+      <%= f.submit "Log in",class: "bg-purple-700 text-white active:bg-purple-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 w-full" %>
     </div>
   </div>
 
