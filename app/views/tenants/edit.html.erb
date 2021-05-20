@@ -4,18 +4,23 @@
 <% if current_user.superadmin_role == TRUE || current_user.supervisor_role == TRUE %>
     <h1>Editing Tenant</h1>
     <%= render 'form', tenant: @tenant %>
-    <a href="/appointments">Back</a><br>
-    <%= link_to 'Back', 'javascript:history.back()', class: "btn btn-success", data:{ confirm: 'Changes you made may not be saved' }  %>
+    <button onclick="backFunction()">Back</button><br>
 <% else %>
     <%= link_to 'Book an appointment', new_appointment_path %>
 <% end %>
 
 <script>
-window.onbeforeunload = function(){
-  return 'Are you sure you want to leave?';
+
+window.onbeforeunload = function(e) {
+    return true;
 };
 
-$('form').submit(function () {
-    window.onbeforeunload = null;
-});
+function backFunction() {
+    <% if current_user.superadmin_role == TRUE %>
+        location.href = "/tenants";
+    <% else %>
+        location.href = "/appointments";
+    <% end %>
+};
+
 </script>
