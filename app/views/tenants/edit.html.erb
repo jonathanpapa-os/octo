@@ -6,7 +6,7 @@
     <%= render 'form', tenant: @tenant %>
     <button onclick="backFunction()">Back</button><br>
 <% else %>
-    <%= link_to 'Book an appointment', new_appointment_path %>
+    <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
 <% end %>
 
 <script>

@@ -36,6 +36,6 @@
 <% else %>
 
   <br>
-  <%= link_to 'Book an appointment', new_appointment_path %>
+  <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
 
 <% end %>
