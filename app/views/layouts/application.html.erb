@@ -43,7 +43,8 @@
               <% if current_user.superadmin_role == TRUE %>
                 <%= link_to "Admin Dashboard", rails_admin_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium', target: :_blank %>
                 <%= link_to "Manage Tenants", tenants_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
-              <% elsif current_user.supervisor_role == TRUE && current_user.email == @tenant.email %>
+                <%= link_to 'Create Tenant', new_tenant_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
+                <% elsif current_user.supervisor_role == TRUE && current_user.email == @tenant.email %>
                 <%= link_to "Manage Appointments", appointments_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
                 <%= link_to 'Edit Company', edit_tenant_path(@tenant), class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
               <% end %>

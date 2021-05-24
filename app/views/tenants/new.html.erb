@@ -2,14 +2,14 @@
 
 <% if current_user.superadmin_role == TRUE %>
     
-    <br><br>
+    <br>
     <h1>Create New Tenant</h1><br>
     <%= render 'form', tenant: @tenant %>
     <a href="javascript:history.back()">Back</a>
     
 <% else %>
     
-    <br><br>
+    <br>
     <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
     
 <% end %>
