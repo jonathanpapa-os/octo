@@ -1,6 +1,6 @@
 <% content_for :title do %>Sign Up<% end %>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-<%= render "devise/shared/error_messages", resource: resource %>
+<%= render "users/shared/error_messages", resource: resource %>
 
 <div class="w-full p-8 flex justify-center font-sans">
 
@@ -32,7 +32,7 @@
 
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <%= render "users/shared/links" %>
 
 </div>
 
