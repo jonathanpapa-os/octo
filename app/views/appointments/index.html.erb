@@ -37,21 +37,18 @@
     </tbody>
   </table>
   
-  <%= link_to 'Book an appointment', new_appointment_path %>
-  
 <% else %>
   
   <% if @tenant.url == "admin" %>
   
     <h1>Welcome to Paralejas Consulting</h1><br>
-    <h1>Go to specific slug!</h1>    
-  
+    <h1>Go to the correct url of the Company</h1>
+    
   <% else %>
   
-    <h1><%= @tenant.url %> user page</h1>
-    <h1>Go to specific slug!</h1>   
+    <h1>Go to the correct url of the Company</h1>
     <br>
-    <%= link_to 'Book an appointment!', new_appointment_path %>
+    <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
   
   <% end %>
 <% end %>

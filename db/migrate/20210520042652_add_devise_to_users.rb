@@ -3,8 +3,10 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.1]
     # Initialize first account:
     User.create! do |u|
       u.email     = 'superadmin@octosched.com'
+      u.name     = 'Administrator'
       u.password    = 'oyG6Q3659kBrhJYDPjNuUTfosdUQAjd'
       u.superadmin_role = 1
+      u.user_role = 0
     end
   end
 

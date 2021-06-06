@@ -2,6 +2,7 @@ class CreateDefaultTenant < ActiveRecord::Migration[6.1]
   def self.up
     # Initialize first account:
     Tenant.create! do |u|
+      u.email     = 'superadmin@octosched.com'
       u.url     = 'admin'
       u.company_name    = 'Superadmin'
       u.company_description = 'Superadmin access'

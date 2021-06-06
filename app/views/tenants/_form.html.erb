@@ -31,29 +31,9 @@
     </div>
 
     <div class="field">
-      <label>Name</label>
-      <%= form.text_field :name, autofocus: true, autocomplete: "name" %>
-    </div>
-
-    <div class="field">
       <label>Email Address</label>
       <%= form.text_field :email, autofocus: true, autocomplete: "email" %>
     </div>
-
-    <div class="field">
-      <label>Password</label>
-      <% if @minimum_password_length %>
-      <em class="float-left mt-4">(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %>
-      <%= form.password_field :password, autocomplete: "new-password" %>
-    </div>
-
-    <div class="field">
-      <label>Password Confirmation</label>
-      <%= form.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-
-    <%= link_to 'Octo Sched', new_appointment_path, class:"font-black text-white w-auto"%>
 
   <% else %>
     <% if current_user.supervisor_role == TRUE %>
@@ -81,9 +61,17 @@
     <% end %>
   <% end %>
 
-  <br><br>
-
+  <br>
   <div class="actions">
-    <b><%= form.submit %></b>
+    <b onclick="submitFunction()"><%= form.submit %></b>
   </div>
 <% end %>
+
+<script>
+
+function submitFunction() {
+  window.onbeforeunload = null;
+};
+
+</script>
+
