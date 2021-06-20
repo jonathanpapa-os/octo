@@ -1,6 +1,6 @@
 <% if resource.errors.any? %>
   <div id="error_explanation">
-    <div class="closeBtn">x</div>
+    <div class="closeBtn" id="closeBtnError" onclick="removeThis(this);">x</div>
     <h2>
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
@@ -13,4 +13,12 @@
       <% end %>
     </ul>
   </div>
+
+
+  <script>
+    function removeThis(_this){
+       var el = document.getElementById( _this.id ); //assuming '_this' is the 'this' reference not the 'id'
+       el.parentNode.parentNode.removeChild( el.parentNode );
+    };
+  </script>
 <% end %>
