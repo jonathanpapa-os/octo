@@ -45,7 +45,7 @@
 
   <div class="field">
     <label>Date & Time</label>
-    <%= form.date_select :starts_at %>
+    <%= form.date_select :starts_at, start_year: Time.now.year %>
     <%= form.time_select :starts_at, :ignore_date => true, :minute_step => 30, :ampm => true %>
   </div>
 
