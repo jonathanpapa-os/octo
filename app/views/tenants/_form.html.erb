@@ -13,65 +13,62 @@
 
   <% if current_user.superadmin_role == TRUE %>
 
-    <div class="field">
-      <label>Company Name</label>
-      <%= form.text_field :company_name, required: true %>
-    </div>
+  <table class="min-w-full leading-normal">
+    <tbody> 
+        <tr>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Company Name</p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_name, required: true %></p> </td>
+        </tr>
+        <tr>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Description</p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_description, required: true, rows: 1 %></p> </td>
+        </tr>
+        <tr>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Customize Your Booking Page URL</p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :url, required: true %> </td>
+        </tr>
+        <tr>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Email Address</p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :email, autofocus: true, autocomplete: "email" %></p> </td>
+        </tr>
+    </tbody>
+  </table>
 
-    <div class="field">
-      <label>Description</label>
-      <%= form.text_area :company_description, required: true, rows: 1 %>
-    </div>
-
-    <div class="field">
-      <label>Customize Your Booking Page URL</label>
-      <input type="text" placeholder="https://" readonly>
-      <span></span><%= form.text_field :url, required: true %>
-      <input type="text" placeholder=".localhost:3000" readonly>
-    </div>
-
-    <div class="field">
-      <label>Email Address</label>
-      <%= form.text_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
 
   <% else %>
     <% if current_user.supervisor_role == TRUE %>
 
-    <div class="field">
-      <label>Company Name</label>
-      <%= form.text_field :company_name, required: true %>
-    </div>
-
-    <div class="field">
-      <label>Description</label>
-      <%= form.text_area :company_description, required: true, rows: 1 %>
-    </div>
-
-    <div class="field">
-      <label>Customize Your Booking Page URL</label>
-      <span>https://</span><%= form.text_field :url, required: true %><span>.localhost:3000</span>
-    </div>
-
-    <div class="field">
-      <label>Email Address</label>
-      <%= form.text_field :email, :placeholder => "Can add later", :readonly => true %>
-    </div>
+    <table class="min-w-full leading-normal">
+      <tbody> 
+          <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Company Name</p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_name, required: true %></p> </td>
+          </tr>
+          <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Description</p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_description, required: true, rows: 1 %></p> </td>
+          </tr>
+          <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Customize Your Booking Page URL</p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :url, required: true, :readonly => true %> </td>
+          </tr>
+          <tr>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Email Address</p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :email, autofocus: true, autocomplete: "email", :readonly => true %></p> </td>
+          </tr>
+      </tbody>
+    </table>
 
     <% end %>
   <% end %>
 
-  <br>
   <div class="actions">
     <b onclick="submitFunction()"><%= form.submit %></b>
-  </div>
+    </div>
 <% end %>
 
 <script>
-
-function submitFunction() {
-  window.onbeforeunload = null;
-};
-
+  function submitFunction() {
+    window.onbeforeunload = null;
+  };
 </script>
-

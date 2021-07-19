@@ -1,25 +1,20 @@
 <% content_for :title do %><%= @tenant.company_name %><% end %>
-<p id="notice"><%= notice %></p>
-<br><br>
 
 <% if current_user.superadmin_role == TRUE %>
 
-    <div class="container mx-auto px-4 sm:px-8">
-        <div class="py-8">
-            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-                <div class="inline-block min-w-half shadow rounded-lg overflow-hidden">
+  <div class="container mx-auto px-4 sm:px-8">
+      <div class="py-8">
+          <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+              <div class="inline-block min-w-half shadow rounded-lg overflow-hidden">
                   <div class="flex bg-gray-100">
-                    <div class="flex-1 m-auto">
-                      <%= link_to 'Back', tenants_path, class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " %>
-                    </div>
-                    <div class="flex-none">
-                      <h2 class="text-2xl font-semibold leading-tight p-3"><%= @tenant.company_name %></h2>
-                    </div>
-                    <div class="flex-1"></div>
+                      <div class="flex-none">
+                        <h2 class="text-2xl font-semibold leading-tight p-3">Tenant Details</h2>
+                      </div>
+                      <div class="flex-1"></div>
                   </div>
 
                     <table class="min-w-full leading-normal">
-                        <tbody>
+                        <tbody> 
                             <tr>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">URL</p> </td>
                                 <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @tenant.url %></p> </td>
@@ -38,40 +33,62 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-        </div>
-    </div>
 
-<% else %>
+                    <%= link_to 'Back', tenants_path %> |
+                    <%= link_to 'Edit', edit_tenant_path(@tenant) %>  |
+                    <input type="hidden" value="<%= @tenant.url %>" id="url">
+                    <button onclick="clickyClick()">Manage Tenant</button>
+                      
+              </div>
+          </div>
+      </div>
+  </div>
 
-    <% if current_user.supervisor_role == TRUE %>
-      <p>
-        <strong>Url:</strong>
-        <%= @tenant.url %>
-      </p>
+<% else
+  if current_user.supervisor_role == TRUE %>
 
-      <p>
-        <strong>Name:</strong>
-        <%= @tenant.company_name %>
-      </p>
+  <div class="container mx-auto px-4 sm:px-8">
+      <div class="py-8">
+          <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+              <div class="inline-block min-w-half shadow rounded-lg overflow-hidden">
+                  <div class="flex bg-gray-100">
+                      <div class="flex-none">
+                        <h2 class="text-2xl font-semibold leading-tight p-3">Tenant Details</h2>
+                      </div>
+                      <div class="flex-1"></div>
+                  </div>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @tenant.company_description %>
-      </p>
+                    <table class="min-w-full leading-normal">
+                        <tbody> 
+                            <tr>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">URL</p> </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @tenant.url %></p> </td>
+                            </tr>
+                            <tr>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Company Name</p> </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @tenant.company_name %></p> </td>
+                            </tr>
+                            <tr>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Description</p> </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @tenant.company_description %></p> </td>
+                            </tr>
+                            <tr>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Email</p> </td>
+                                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @tenant.email %></p> </td>
+                            </tr>
+                        </tbody>
+                    </table>
+              </div>
+          </div>
+      </div>
+  </div>
 
-      <p>
-        <strong>Email:</strong>
-        <%= @tenant.email %>
-      </p>
+  <% else %>
 
-    <% else %>
+    <h2>You don&apos;t have access to this page!</h2>
+    <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
 
-      <br><br>
-      <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
-
-    <% end %>
+  <% end %>
 <% end %>
 
 <script type="text/javascript">
