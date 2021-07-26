@@ -45,9 +45,14 @@
 
   <div class="field">
     <label>Date & Time</label>
-    <%= form.date_select :starts_at %>
-    <%= form.time_select :starts_at, :ignore_date => true, :minute_step => 30, :ampm => true %>
+    <%= select nil, "", (Date.today.year..Date.today.year+2).collect { |y| y }, options = {}, id: "" %>
+    <%= select nil, "", (Date.today..Date.today.end_of_year).collect { |d| ["#{d.strftime('%B')}", d.strftime('%m')] }.uniq, options = {}, id: "" %>
+    <%# <%= form.date_select :starts_at, start_year: Time.now.year %>
+    <%= form.time_select :starts_at, :ignore_date => true, :minute_step => 30, :ampm => true %> 
   </div>
+
+
+
 
   <div class="field">
     <%= form.hidden_field :tenant_id, value: @tenant.id %>

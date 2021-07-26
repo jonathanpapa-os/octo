@@ -1,26 +1,40 @@
 <% content_for :title do %>Edit Account<% end %>
-<br><br>
 
 <% if current_user.superadmin_role == TRUE || current_user.supervisor_role == TRUE %>
-    <h1>Editing Tenant</h1>
-    <%= render 'form', tenant: @tenant %>
-    <button onclick="backFunction()">Back</button><br>
+
+<div class="container mx-auto px-4 sm:px-8">
+      <div class="py-8">
+          <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+              <div class="inline-block min-w-half shadow rounded-lg overflow-hidden">
+                <div class="flex bg-gray-100">
+                  <div class="flex-none">
+                    <h2 class="text-2xl font-semibold leading-tight p-3">Edit Tenant Details</h2>
+                  </div>
+                  <div class="flex-1"></div>
+                </div>
+
+                <%= render 'form', tenant: @tenant %>
+                <button onclick="backFunction()">Back</button>
+
+              </div>
+          </div>
+      </div>
+  </div>
+    
 <% else %>
     <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
 <% end %>
 
 <script>
+    window.onbeforeunload = function(e) {
+        return true;
+    };
 
-window.onbeforeunload = function(e) {
-    return true;
-};
-
-function backFunction() {
-    <% if current_user.superadmin_role == TRUE %>
-        location.href = "/tenants";
-    <% else %>
-        location.href = "/appointments";
-    <% end %>
-};
-
+    function backFunction() {
+        <% if current_user.superadmin_role == TRUE %>
+            location.href = "/tenants";
+        <% else %>
+            location.href = "/appointments";
+        <% end %>
+    };
 </script>
