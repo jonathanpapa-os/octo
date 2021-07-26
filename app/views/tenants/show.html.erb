@@ -2,8 +2,6 @@
 <p id="notice"><%= notice %></p>
 <br><br>
 
-<% if current_user.superadmin_role == TRUE %>
-
     <div class="container mx-auto px-4 sm:px-8">
         <div class="py-8">
             <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -43,36 +41,19 @@
         </div>
     </div>
 
-<% else %>
+    <% if current_user.superadmin_role == TRUE %>
 
-    <% if current_user.supervisor_role == TRUE %>
-      <p>
-        <strong>Url:</strong>
-        <%= @tenant.url %>
-      </p>
+    <%= link_to 'Back', tenants_path %> |
+    <%= link_to 'Edit', edit_tenant_path(@tenant) %>  |
+    <input type="hidden" value="<%= @tenant.url %>" id="url">
+    <button onclick="clickyClick()">Manage Tenant</button>
 
-      <p>
-        <strong>Name:</strong>
-        <%= @tenant.company_name %>
-      </p>
+    <% elsif current_user.supervisor_role == TRUE  %>
 
-      <p>
-        <strong>Description:</strong>
-        <%= @tenant.company_description %>
-      </p>
-
-      <p>
-        <strong>Email:</strong>
-        <%= @tenant.email %>
-      </p>
-
-    <% else %>
-
-      <br><br>
-      <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
+    <br><br>
+    <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
 
     <% end %>
-<% end %>
 
 <script type="text/javascript">
     function clickyClick() {
