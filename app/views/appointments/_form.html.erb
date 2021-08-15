@@ -23,7 +23,8 @@
 
   <div class="field">
     <label>Phone Number</label>
-    <%= form.text_field :phone, required: true %>
+    <%= form.number_field :phone, required: true %>
+    <%# <%= form.text_field :phone, required: true %>
   </div>
 
   <div class="field">
@@ -50,9 +51,6 @@
     <%# <%= form.date_select :starts_at, start_year: Time.now.year %>
     <%= form.time_select :starts_at, :ignore_date => true, :minute_step => 30, :ampm => true %>
   </div>
-
-
-
 
   <div class="field">
     <%= form.hidden_field :tenant_id, value: @tenant.id %>
