@@ -40,8 +40,9 @@
   </div>
 
   <div class="field">
-    <label>Complete Address <i>(Street, Barangay, Municipality/ City)</i></label>
-    <%= form.text_field :address %>
+    <label>Complete Address</label>
+    <%= form.text_field :street, :placeholder => 'Street, Barangay' %>
+    <%= form.text_field :city, :placeholder => 'Municipality/ City' %>
   </div>
 
   <div class="field">
