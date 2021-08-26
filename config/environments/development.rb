@@ -44,7 +44,7 @@ Rails.application.configure do
     authentication: 'plain',
     enable_starttls_auto: true,
     user_name:  'johndoe111620@gmail.com',
-    password:   'Default2020!'
+    password:   'a7jet[m.d#6(PV4mRnLw{fN-!M=PXK'
   }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
