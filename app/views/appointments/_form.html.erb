@@ -36,13 +36,13 @@
 
   <div class="field">
     <label>Birthday</label>
-    <%= form.date_select :birthday, start_year: Time.now.year - 70, end_year: Time.now.year %>
+    <%= form.date_select :birthday, start_year: Time.now.year - 70, end_year: Time.now.year, required: true %>
   </div>
 
   <div class="field">
-    <label>Complete Address</label>
-    <%= form.text_field :street, :placeholder => 'Street, Barangay' %>
-    <%= form.text_field :city, :placeholder => 'Municipality/ City' %>
+    <label>Address</label>
+    <%= form.text_field :address, :placeholder => 'Street, Barangay', required: true %>
+    <%= form.text_field :address, :placeholder => 'Municipality/ City', required: true %>
   </div>
 
   <div class="field">
