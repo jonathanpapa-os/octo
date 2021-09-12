@@ -29,9 +29,12 @@
 
   <div class="field">
     <label>Gender</label><br>
-    <%= form.radio_button :gender, 'Male' %> Male
-    <%= form.radio_button :gender, 'Female' %>Female
-    <%= form.radio_button :gender, 'N/A' %>N/A
+    <%= form.label :gender, "Male", :value => "male"  %>
+    <%= form.radio_button :gender, 'male' %>
+    <%= form.label :gender, "Female", :value => "female" %>
+    <%= form.radio_button :gender, 'female'%>
+    <%= form.label :gender, "N/A", :value => "none" %>
+    <%= form.radio_button :gender, 'none', :checked => true %>
   </div>
 
   <div class="field">
