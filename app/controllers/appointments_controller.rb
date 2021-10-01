@@ -22,7 +22,9 @@ class AppointmentsController < ApplicationController
 
   # POST /appointments or /appointments.json
   def create
+    birthday = Date.civil(params[:appointment]["birthday(1i)"].to_i,params[:appointment]["birthday(2i)"].to_i,params[:appointment]["birthday(3i)"].to_i)
     @appointment = Appointment.new(appointment_params)
+    @appointment.birthday = birthday
 
     respond_to do |format|
       if @appointment.save
@@ -66,12 +68,12 @@ class AppointmentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def appointment_params
-    params.require(:appointment).permit(:name, :gender, :phone, :email, :tenant_id, :company_name, :birthday, :address)
+    params.require(:appointment).permit(:name, :gender, :phone, :email, :tenant_id, :company_name, :address)
   end
 
   # ...
 
   def set_tenant
-    @tenant = Tenant.find_by!(url: request.subdomain)
+    @tenant = Tenant.find_by!(url: request.domain)
   end
 end
