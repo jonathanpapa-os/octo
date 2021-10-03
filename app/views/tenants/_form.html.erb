@@ -13,23 +13,23 @@
 
   <% if current_user.superadmin_role == TRUE %>
 
-  <table class="min-w-full leading-normal">
-    <tbody> 
+  <table class="min-w-full leading-normal border-0">
+    <tbody>
         <tr>
             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Company Name</p> </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_name, required: true %></p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_name, required: true, class:"bg-gray-100 p-2 rounded", placeholder:"Company Name" %></p> </td>
         </tr>
         <tr>
             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Description</p> </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_description, required: true, rows: 1 %></p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_description, required: true, rows: 1, class:"bg-gray-100 p-2 rounded", placeholder:"Description" %></p> </td>
         </tr>
         <tr>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Customize Your Booking Page URL</p> </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :url, required: true %> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Booking Page URL</p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :url, required: true, class:"bg-gray-100 p-2 rounded", placeholder:"Customized Booking Page URL" %> </td>
         </tr>
         <tr>
             <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Email Address</p> </td>
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :email, autofocus: true, autocomplete: "email" %></p> </td>
+            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :email, autofocus: true, autocomplete: "email", class:"bg-gray-100 p-2 rounded", placeholder:"Email" %></p> </td>
         </tr>
     </tbody>
   </table>
@@ -39,22 +39,22 @@
     <% if current_user.supervisor_role == TRUE %>
 
     <table class="min-w-full leading-normal">
-      <tbody> 
+      <tbody>
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Company Name</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_name, required: true %></p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_name, required: true, class:"bg-gray-100 p-2 rounded", placeholder:"Company Name" %></p> </td>
           </tr>
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Description</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_description, required: true, rows: 1 %></p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :company_description, required: true, rows: 1, class:"bg-gray-100 p-2 rounded", placeholder:"Description" %></p> </td>
           </tr>
           <tr>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Customize Your Booking Page URL</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :url, required: true, :readonly => true %> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Booking Page URL</p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :url, required: true, :readonly => true, class:"bg-gray-100 p-2 rounded", placeholder:"Customized Booking Page URL" %> </td>
           </tr>
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Email Address</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :email, autofocus: true, autocomplete: "email", :readonly => true %></p> </td>
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= form.text_field :email, autofocus: true, autocomplete: "email", :readonly => true, class:"bg-gray-100 p-2 rounded", placeholder:"Email" %></p> </td>
           </tr>
       </tbody>
     </table>
@@ -62,13 +62,13 @@
     <% end %>
   <% end %>
 
-  <div class="actions">
-    <b onclick="submitFunction()"><%= form.submit %></b>
+  <div class="actions bg-white">
+    <b onclick="submitFunction()"><%= form.submit class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" %></b>
     </div>
 <% end %>
 
 <script>
   function submitFunction() {
     window.onbeforeunload = null;
-  }
+  };
 </script>

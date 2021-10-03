@@ -7,6 +7,9 @@
           <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
               <div class="inline-block min-w-half shadow rounded-lg overflow-hidden">
                 <div class="flex bg-gray-100">
+                  <div class="flex-1 m-auto">
+                    <%= link_to 'Back', tenants_path, class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded " %>
+                  </div>
                   <div class="flex-none">
                     <h2 class="text-2xl font-semibold leading-tight p-3">Edit Tenant Details</h2>
                   </div>
@@ -14,13 +17,12 @@
                 </div>
 
                 <%= render 'form', tenant: @tenant %>
-                <button onclick="backFunction()">Back</button>
 
               </div>
           </div>
       </div>
   </div>
-    
+
 <% else %>
     <%= link_to 'Book an appointment to ' + @tenant.company_name , new_appointment_path %>
 <% end %>
