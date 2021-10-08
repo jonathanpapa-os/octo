@@ -23,8 +23,16 @@ class AppointmentsController < ApplicationController
   # POST /appointments or /appointments.json
   def create
     birthday = Date.civil(params[:appointment]["birthday(1i)"].to_i,params[:appointment]["birthday(2i)"].to_i,params[:appointment]["birthday(3i)"].to_i)
+
+    year = params[:appointment][:year]
+    month = params[:appointment][:month]
+    hour = params[:appointment]["time(4i)"]
+    minute = params[:appointment]["time(5i)"]
+
+    appointment = "#{year}-#{month}-00 #{hour}:#{minute}:00"
     @appointment = Appointment.new(appointment_params)
     @appointment.birthday = birthday
+    @appointment.appointment = appointment
 
     respond_to do |format|
       if @appointment.save
