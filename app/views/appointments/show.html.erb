@@ -14,7 +14,7 @@
                 </div>
 
                   <table class="min-w-full leading-normal">
-                      <tbody> 
+                      <tbody>
                           <tr>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Name</p> </td>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @appointment.name %></p> </td>
@@ -30,6 +30,10 @@
                           <tr>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Birthday</p> </td>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @appointment.birthday %></p> </td>
+                          </tr>
+                          <tr>
+                              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Appointment Date & Time</p> </td>
+                              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @appointment.appointment %></p> </td>
                           </tr>
                           <tr>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Address</p> </td>
@@ -51,10 +55,10 @@
       </div>
   </div>
 
-  
+
 
 <% else %>
-  
+
   <div class="container mx-auto px-4 sm:px-8">
       <div class="py-8">
           <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
@@ -67,7 +71,7 @@
                 </div>
 
                   <table class="min-w-full leading-normal">
-                      <tbody> 
+                      <tbody>
                           <tr>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Name</p> </td>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @appointment.name %></p> </td>
@@ -83,6 +87,10 @@
                           <tr>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Birthday</p> </td>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @appointment.birthday %></p> </td>
+                          </tr>
+                          <tr>
+                              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Appointment Date & Time</p> </td>
+                              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-right"><%= @appointment.appointment %></p> </td>
                           </tr>
                           <tr>
                               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Address</p> </td>
