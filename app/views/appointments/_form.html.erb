@@ -52,6 +52,7 @@
     <label>Date & Time</label>
     <%= form.select :year, (Date.today.year..Date.today.year+2).collect { |y| y }, options = {}, id: "" %>
     <%= form.select :month, (Date.today..Date.today.end_of_year).collect { |d| ["#{d.strftime('%B')}", d.strftime('%m')] }.uniq, options = {}, id: "" %>
+    <%= form.select :day, (Date.today..Date.today.end_of_year).collect { |d| ["#{d.strftime('%d')}", d.strftime('%d')] }.uniq, options = {}, id: "" %>
     <%# <%= form.date_select :starts_at, start_year: Time.now.year %>
     <%= form.time_select :time, :ignore_date => true, :minute_step => 30, :ampm => true %>
   </div>
