@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_05_20_042652) do
     t.string "address"
     t.string "email"
     t.string "tenant_id"
+    t.string "appointment", limit: 30
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
