@@ -26,10 +26,11 @@ class AppointmentsController < ApplicationController
 
     year = params[:appointment][:year]
     month = params[:appointment][:month]
+    day = params[:appointment][:day]
     hour = params[:appointment]["time(4i)"]
     minute = params[:appointment]["time(5i)"]
 
-    appointment = "#{year}-#{month}-00 #{hour}:#{minute}:00"
+    appointment = "#{year}-#{month}-#{day} #{hour}:#{minute}:00"
     @appointment = Appointment.new(appointment_params)
     @appointment.birthday = birthday
     @appointment.appointment = appointment
@@ -82,6 +83,6 @@ class AppointmentsController < ApplicationController
   # ...
 
   def set_tenant
-    @tenant = Tenant.find_by!(url: request.domain)
+    @tenant = Tenant.find_by!(id: 1)
   end
 end
