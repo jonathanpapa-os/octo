@@ -51,7 +51,7 @@
   <div class="field">
     <label>Date & Time</label>
     <%= form.select :year, (Date.today.year..Date.today.year+2).collect { |y| y }, options = {}, id: "" %>
-    
+
     <%# <%= form.select :month, (Date.today..Date.today.end_of_year).collect { |d| ["#{d.strftime('%B')}", d.strftime('%m')] }.uniq, options = {}, id: "" %>
     <%= form.select :month, options_for_select(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]), :class => 'month_select' %>
     <%= form.select :day, options_for_select(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]), :class => 'day_select' %>
@@ -60,6 +60,17 @@
     <%# <%= form.date_select :starts_at, start_year: Time.now.year %>
     <%= form.time_select :time, :ignore_date => true, :minute_step => 30, :ampm => true %>
   </div>
+
+  <style media="screen">
+    .appointment_dates{
+      display: none;
+    }
+  </style>
+  <div class="time">
+   <% Appointment.all.each do |row| %>
+   <p class="appointment_dates"><%= row.appointment %></p>
+   <% end %>
+ </div>
 
   <div class="field">
     <%= form.hidden_field :tenant_id, value: @tenant.id %>
