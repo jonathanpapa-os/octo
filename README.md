@@ -3,7 +3,7 @@ Octosched Open Source Scheduling System
 
 <i>Features:</i>
 
-<b>Tenants.</b> Each tenant can work indepently using subdomain 
+<b>Tenants.</b> Each tenant can work independently using a subdomain
 
 <b>Appointments.</b> Only signed in users can create an appointment
 
