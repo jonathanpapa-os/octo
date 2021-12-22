@@ -11,7 +11,7 @@ Octosched Open Source Scheduling System
 
 <b>Superadmin.</b> Superadmin can add/ manage all the tenants
 
-<b>Supervisor.</b> Supervisors per domain can access and manage all the scheduled appointments
+<b>Supervisor.</b> Supervisors per subdomain can access and manage all the scheduled appointments
 
 <br>
 
