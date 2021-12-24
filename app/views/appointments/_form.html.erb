@@ -40,7 +40,7 @@
           </tr>
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Gender</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <td class="border-b border-gray-200 bg-white text-sm text-left pl-5">
                 <%= form.label :gender, "Male", :value => "male"  %>
                 <%= form.radio_button :gender, 'male' %>
                 <%= form.label :gender, "Female", :value => "female" %>
@@ -51,7 +51,7 @@
           </tr>
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Birthday</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left pl-5">
                 <%= form.date_select :birthday, start_year: 1950, end_year: 2005, required: true %>
               </td>
           </tr>
@@ -65,7 +65,7 @@
           </tr>
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Date & Time</p> </td>
-              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left pl-5">
                 <%= form.select :year, (Date.today.year..Date.today.year+2).collect { |y| y }, options = {}, id: "" %>
 
                 <%= form.select :month, options_for_select(["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]), :class => 'month_select' %>
@@ -97,6 +97,6 @@
 <br>
 
   <div class="actions">
-    <%= form.submit 'Create Appointment', :class => 'bg-purple-700 text-white active:bg-purple-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150' %>
+    <%= form.submit 'Create Appointment', :class => 'bg-purple-700 text-white active:bg-purple-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 cursor-pointer' %>
   </div>
 <% end %>
