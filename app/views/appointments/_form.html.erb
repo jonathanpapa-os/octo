@@ -72,15 +72,11 @@
 </div>
 
   <style media="screen">
-    .appointment_dates{
+    #appointment_dates{
       display: none;
     }
   </style>
-  <div class="time">
-   <% Appointment.all.each do |row| %>
-   <p class="appointment_dates"><%= row.appointment %></p>
-   <% end %>
- </div>
+  <div id="appointment_dates"><% Appointment.all.each do |row| %><%= row.appointment %>,<% end %></div>
 
   <div class="field">
     <%= form.hidden_field :tenant_id, value: @tenant.id %>
@@ -93,3 +89,9 @@
     <%= form.submit 'Create Appointment', :class => 'bg-purple-700 text-white active:bg-purple-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 cursor-pointer' %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  var string = document.getElementById('appointment_dates').innerHTML;
+  var array = string.split(",");
+  console.log(array)
+</script>
