@@ -8,6 +8,19 @@
     </div>
     <div class="text-md mt-2">
 
+    <div class="md:flex">
+        <div class="w-full p-2 py-10">
+            <div class="flex justify-center">
+                <div class="relative">
+                  <%= image_tag "user.svg", class: 'w-20 h-20 rounded-full' %>
+                    <button type="button" name="button" class=" object-contain absolute border-white border-4 h-8 w-8 top-0 left-20 bg-purple-700 rounded-full">
+                      <%= image_tag "edit.png", class: 'p-1' %>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
