@@ -90,8 +90,21 @@
   </div>
 <% end %>
 
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
 <script type="text/javascript">
   var string = document.getElementById('appointment_dates').innerHTML;
   var array = string.split(",");
-  console.log(array)
+
+  $.each( array, function( key, value ) {
+      console.log( value );
+  });
+
+  if($( "#appointment_month option:selected" ).val()=='January'){
+    $("#appointment_day option[value='1']").remove();
+  }
+
 </script>
