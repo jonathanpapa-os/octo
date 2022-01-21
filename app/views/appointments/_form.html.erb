@@ -100,7 +100,15 @@
   var array = string.split(",");
 
   $.each( array, function( key, value ) {
-      console.log( value );
+      var fullname = value.split("-");
+      year = '';
+      month = '';
+      day_and_time = '';
+      year=fullname[0];
+      day_and_time=fullname[fullname.length-1];
+      for(var i=1; i < fullname.length-1; i++) {
+         month =  month +" "+ fullname[i];
+      }
   });
 
   if($( "#appointment_month option:selected" ).val()=='January'){
