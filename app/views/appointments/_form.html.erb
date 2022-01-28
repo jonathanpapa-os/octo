@@ -99,20 +99,24 @@
   var string = document.getElementById('appointment_dates').innerHTML;
   var array = string.split(",");
 
-  $.each( array, function( key, value ) {
-      var fullname = value.split("-");
-      year = '';
-      month = '';
-      day_and_time = '';
-      year=fullname[0];
-      day_and_time=fullname[fullname.length-1];
-      for(var i=1; i < fullname.length-1; i++) {
-         month =  month +" "+ fullname[i];
-      }
+  $("#appointment_month").change(function(){
+    $.each( array, function( key, value ) {
+        var fullname = value.split("-");
+        year = '';
+        month = '';
+        day_and_time = '';
+        year=fullname[0];
+        day_and_time=fullname[fullname.length-1];
+        for(var i=1; i < fullname.length-1; i++) {
+           month =  month +" "+ fullname[i];
+           if($( "#appointment_month option:selected" ).val()==month){
+             $("#appointment_day option[value='1']").remove();
+           }
+        }
+    });
   });
 
-  if($( "#appointment_month option:selected" ).val()=='January'){
-    $("#appointment_day option[value='1']").remove();
-  }
+
+
 
 </script>
