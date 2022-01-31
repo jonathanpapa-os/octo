@@ -133,7 +133,7 @@ nav ul li a.active {
   max-width: 400px;
   position: fixed;
   right: 20px;
-  top: 30px;
+    top: 80px;
   animation: fadein 500ms;
   -moz-animation: fadein 500ms; /* Firefox */
   -webkit-animation: fadein 500ms; /* Safari and Chrome */
