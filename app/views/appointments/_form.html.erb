@@ -112,11 +112,12 @@
            if($( "#appointment_month option:selected" ).val()==month){
              $("#appointment_day option[value='1']").remove();
            }
+          var i = day_and_time.indexOf(' ');
+          var partOne = day_and_time.slice(0, i).trim();
+          var partTwo = day_and_time.slice(i + 1, day_and_time.length).trim();
+          alert(partTwo)
         }
     });
   });
-
-
-
 
 </script>
