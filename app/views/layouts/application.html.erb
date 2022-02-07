@@ -49,10 +49,6 @@
                 <%= link_to "Manage Appointments", appointments_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
                 <%= link_to 'Edit Company', edit_tenant_path(@tenant), class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
               <% end %>
-
-              <% if current_user.user_role == TRUE  %>
-                <%= link_to 'Edit Profile', edit_user_registration_path, class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
-              <% end %>
             <% end %>
 
           </div>
@@ -85,8 +81,15 @@
               <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10" style="display: none;"></div>
               <div x-show="dropdownOpen" class="absolute w-64 right-0 mt-2 bg-white rounded-md shadow-lg overflow-hidden z-20" style="display: none;">
                  <div class="py-2">
-                    <%= link_to "User Profile", edit_user_registration_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :get %>
-                    <%= link_to "Logout", destroy_user_session_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :delete %>
+
+                   <% if user_signed_in? %>
+                     <%= link_to "User Profile", edit_user_registration_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :get %>
+                     <%= link_to "Logout", destroy_user_session_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :delete %>
+                   <% else %>
+                     <%= link_to "Sign up", new_registration_path(resource_name),class: "flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                     <%= link_to "Log in", new_session_path(resource_name),class: "flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
+                 <% end %>
+
                  </div>
               </div>
            </div>
