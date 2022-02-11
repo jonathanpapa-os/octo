@@ -100,6 +100,7 @@
   var array = string.split(",");
 
   $("#appointment_month").change(function(){
+    var date_to_remove = [];
     $.each( array, function( key, value ) {
         var fullname = value.split("-");
         year = '';
@@ -109,14 +110,12 @@
         day_and_time=fullname[fullname.length-1];
         for(var i=1; i < fullname.length-1; i++) {
            month =  month +" "+ fullname[i];
-           if($( "#appointment_month option:selected" ).val()==month){
-             $("#appointment_day option[value='1']").remove();
-           }
-          var i = day_and_time.indexOf(' ');
-          var partOne = day_and_time.slice(0, i).trim();
-          var partTwo = day_and_time.slice(i + 1, day_and_time.length).trim();
-          alert(partTwo)
+           var i = day_and_time.indexOf(' ');
+           var day = day_and_time.slice(0, i).trim();
+           var time = day_and_time.slice(i + 1, day_and_time.length).trim();
+           date_to_remove.push(month+','+day+','+time+','+year);
         }
+        alert(date_to_remove)
     });
   });
 
