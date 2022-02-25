@@ -97,7 +97,6 @@
 
 <script type="text/javascript">
 
-  $( document ).ready(function() {
 
     var string = document.getElementById('appointment_dates').innerHTML;
     var array = string.split(",");
@@ -123,9 +122,9 @@
                let text = value + '';
                const to_remove = text.split(",");
                var r_month = to_remove[0].replace(/\s/g, '')
+               var r_day = to_remove[1].replace(/\s/g, '')
                if($( "#appointment_month option:selected" ).val()== r_month){
-                 $("#appointment_day option[value='1']").remove();
-                 alert('ok')
+                 $("#appointment_day option[value='"+r_day+"']").remove();
                }
 
              });
@@ -134,6 +133,5 @@
           }
       });
     });
-  });
 
 </script>
