@@ -100,15 +100,15 @@
 
 <script type="text/javascript">
 
+  var $options = $("#appointment_day > option").clone();
+  $('#for_cloning_select').append($options);
 
     var string = document.getElementById('appointment_dates').innerHTML;
     var array = string.split(",");
 
-    var $options = $("#appointment_day > option").clone();
-    $('#for_cloning_select').append($options);
-
     $("#appointment_month").change(function(){
       var date_to_remove = [];
+      var $cloned_options = $("#for_cloning_select > option").clone();
       $.each( array, function( key, value ) {
           var fullname = value.split("-");
           year = '';
@@ -125,6 +125,8 @@
 
 
              $.each(date_to_remove, function( key, value ) {
+               $('#appointment_day option').remove();
+               $('#appointment_day').append($cloned_options);
                let text = value + '';
                const to_remove = text.split(",");
                var r_month = to_remove[0].replace(/\s/g, '')
