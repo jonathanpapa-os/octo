@@ -81,7 +81,7 @@
   <div class="field">
     <%= form.hidden_field :tenant_id, value: @tenant.id %>
     <%= form.hidden_field :company_name, value: @tenant.company_name %>
-    <select class="" name="" id="for_cloning_select">
+    <select class="d-none" name="" id="for_cloning_select" style="display:none">
 
     </select>
   </div>
@@ -93,10 +93,7 @@
   </div>
 <% end %>
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 <script type="text/javascript">
 
@@ -129,10 +126,10 @@
                $('#appointment_day').append($cloned_options);
                let text = value + '';
                const to_remove = text.split(",");
-               var r_month = to_remove[0].replace(/\s/g, '')
-               var r_day = to_remove[1].replace(/\s/g, '')
-               if($( "#appointment_month option:selected" ).val()== r_month){
-                 $("#appointment_day option[value='"+r_day+"']").remove();
+               var replaced_months = to_remove[0].replace(/\s/g, '')
+               var replaced_day = to_remove[1].replace(/\s/g, '')
+               if($( "#appointment_month option:selected" ).val()== replaced_months){
+                 $("#appointment_day option[value='"+replaced_day+"']").remove();
                }
 
              });
