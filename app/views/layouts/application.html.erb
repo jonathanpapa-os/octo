@@ -33,7 +33,16 @@
         <div class="flex-shrink-0 flex items-center">
           <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"> -->
 
-          <%= link_to 'Octo Sched', new_appointment_path, class:"font-black text-white w-auto"%>
+          <% if user_signed_in? %>
+            <% if current_user.superadmin_role == TRUE %>
+            <a href="<%= new_appointment_path %>" class="font-black text-white w-auto">Admin</a>
+            <% elsif current_user.supervisor_role == TRUE || current_user.user_role == TRUE %>
+            <a href="<%= new_appointment_path %>" class="font-black text-white w-auto"><%= @tenant.company_name %></a>
+            <% end %>
+          <% else %>
+            <a href="<%= new_appointment_path %>" class="font-black text-white w-auto">Octo Sched</a>
+          <% end %>
+
         </div>
         <div class="hidden sm:block sm:ml-6">
           <div class="flex space-x-4">
