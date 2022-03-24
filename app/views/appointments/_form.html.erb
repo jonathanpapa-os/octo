@@ -69,28 +69,29 @@
           </tr>
       </tbody>
   </table>
+
+  <div class="actions bg-white">
+      <style media="screen">
+          #appointment_dates{
+              display: none;
+          }
+      </style>
+
+      <div id="appointment_dates"><% Appointment.all.each do |row| %><%= row.appointment %>,<% end %></div>
+
+      <div class="field">
+        <%= form.hidden_field :tenant_id, value: @tenant.id %>
+        <%= form.hidden_field :company_name, value: @tenant.company_name %>
+        <select class="d-none" name="" id="for_cloning_select" style="display:none">
+
+        </select>
+      </div>
+
+      <div class="actions">
+        <br><%= form.submit 'Create Appointment', :class => 'bg-purple-700 text-white active:bg-purple-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 cursor-pointer' %><br><br>
+      </div>
+  </div>
 </div>
-
-  <style media="screen">
-    #appointment_dates{
-      display: none;
-    }
-  </style>
-  <div id="appointment_dates"><% Appointment.all.each do |row| %><%= row.appointment %>,<% end %></div>
-
-  <div class="field">
-    <%= form.hidden_field :tenant_id, value: @tenant.id %>
-    <%= form.hidden_field :company_name, value: @tenant.company_name %>
-    <select class="d-none" name="" id="for_cloning_select" style="display:none">
-
-    </select>
-  </div>
-
-<br>
-
-  <div class="actions">
-    <%= form.submit 'Create Appointment', :class => 'bg-purple-700 text-white active:bg-purple-800 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 cursor-pointer' %>
-  </div>
 <% end %>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
