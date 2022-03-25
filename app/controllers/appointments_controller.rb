@@ -83,6 +83,6 @@ class AppointmentsController < ApplicationController
   # ...
 
   def set_tenant
-    @tenant = Tenant.find_by!(url: request.subdomain)
+    @tenant = Tenant.find_by!(id: 1)
   end
 end
