@@ -124,6 +124,7 @@
              $.each(date_to_remove, function( key, value ) {
                $('#appointment_day option').remove();
                $('#appointment_day').append($cloned_options);
+               $("#appointment_day").val('1');
                let text = value + '';
                const to_remove = text.split(",");
                var replaced_months = to_remove[0].replace(/\s/g, '')
@@ -133,8 +134,6 @@
                }
 
              });
-
-
           }
       });
     });
