@@ -1,14 +1,10 @@
 <% content_for :title do %>Book Now!<% end %>
 
 <% if @tenant.url == "admin" %>
-    
     <h1>Go to the correct url of the Company</h1>
-    
 <% else %>
-    
-    <h1><%= @tenant.company_name %> page</h1><br>
-    <h1>BOOK AN APPOINTMENT NOW! </h1><br>
-    <%= render 'form', appointment: @appointment %>
-    
+  <br>
+  <h1>BOOK AN APPOINTMENT NOW! </h1><br>
+  <%= render 'form', appointment: @appointment %>
 <% end %>
     
