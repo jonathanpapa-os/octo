@@ -45,7 +45,7 @@
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Birthday</p> </td>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left pl-5">
-                <%= form.date_select :birthday, start_year: 1950, end_year: 2005, required: true %>
+                <%= form.date_select :birthday,{:start_year => 1950, :end_year => 2005}, {class: "form-select appearance-none px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}  %>
               </td>
           </tr>
           <tr>
