@@ -71,12 +71,6 @@
   </table>
 
   <div class="actions bg-white">
-      <style media="screen">
-          #appointment_dates{
-              display: none;
-          }
-      </style>
-
       <div id="appointment_dates"><% Appointment.all.each do |row| %><%= row.appointment %>,<% end %></div>
 
       <div class="field">
