@@ -126,6 +126,13 @@
                  $("#appointment_day option[value='"+replaced_day+"']").remove();
                }
 
+               if($( "#appointment_month option:selected" ).val()== 'February'){
+                 var list = ["31", "30", "29"];
+                  $('#appointment_day option').filter(function () {
+                     return $.inArray(this.value, list) !== -1
+                  }).remove();
+               }
+               
              });
           }
       });
