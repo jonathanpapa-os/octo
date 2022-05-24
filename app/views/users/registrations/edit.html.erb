@@ -15,8 +15,8 @@
         <div class="w-full p-2 py-10">
             <div class="flex justify-center">
                 <div class="relative">
-                  <%= image_tag "user.svg", class: 'w-20 h-20 rounded-full' %>
-                    <label class="object-contain absolute border-white border-4 h-8 w-8 top-0 left-20 bg-white border-purple-700 rounded-full">
+                  <%= image_tag "user.svg", class: 'w-20 h-20 rounded-full border-solid border-2 border-gray-400' %>
+                    <label class="object-contain absolute border-white border-2 h-8 w-8 top-0 left-20 bg-white border-purple-700 rounded-full">
                       <%= image_tag "edit.png", class: 'p-1' %>
                       <span style="display:none;">
                         <%= f.file_field :image, required: true, multiple: true, name: 'display_picture' %>
