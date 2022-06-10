@@ -120,7 +120,7 @@
                $("#appointment_day").val('1');
                let text = value + '';
                const to_remove = text.split(",");
-               var months_1 = ['March', 'April', 'June', 'August', 'September'];
+               var months_30 = ['March', 'April', 'June', 'August', 'September', 'November'];
                var replaced_months = to_remove[0].replace(/\s/g, '')
                var replaced_day = to_remove[1].replace(/\s/g, '')
                if($( "#appointment_month option:selected" ).val()== replaced_months){
@@ -134,12 +134,14 @@
                   }).remove();
                }
 
-                 if(jQuery.inArray($( "#appointment_month option:selected" ).val(), months_1) != -1) {
-                     var list = ["31"];
-                     $('#appointment_day option').filter(function () {
-                         return $.inArray(this.value, list) !== -1
-                     }).remove();
-                 }
+               if(jQuery.inArray($( "#appointment_month option:selected" ).val(), months_30) != -1) {
+                   var list = ["31"];
+                   $('#appointment_day option').filter(function () {
+                       return $.inArray(this.value, list) !== -1
+                   }).remove();
+               }
+
+
              });
           }
       });
