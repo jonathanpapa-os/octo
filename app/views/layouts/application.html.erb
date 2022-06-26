@@ -111,24 +111,30 @@
   </div>
 </nav>
 
-<%
-if user_signed_in?
-  unless session[:display_welcome]
-    flash.now[:notice] = "Welcome! " + current_user.name
-    session[:display_welcome] = true
-  end
-end
-%>
+<div class="container mx-auto px-4 sm:px-8">
+    <div class="py-8">
+
+      <%
+      if user_signed_in?
+        unless session[:display_welcome]
+          flash.now[:notice] = "Welcome! " + current_user.name
+          session[:display_welcome] = true
+        end
+      end
+      %>
 
 
-<% if notice %>
-  <div class="text-center alert alert_default alert-dismissible">
-    <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">&times;</a>
-    <%= notice %>
+      <% if notice %>
+        <div class="text-center alert-login alert_default alert-dismissible">
+          <a href="#" class="flash_close_btn" data-dismiss="alert" aria-label="close">&times;</a>
+          <%= notice %>
+        </div> <br>
+      <% end %>
+
+    <%= yield %>
+
   </div>
-<% end %>
-
-  <%= yield %>
+</div>
 
 </body>
 </html>

@@ -140,6 +140,20 @@ nav ul li a.active {
   -o-animation: fadein 500ms; /* Opera */
 }
 
+.alert-login {
+    padding: 15px 25px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    max-width: 400px;
+    position: relative;
+    margin-left: auto;
+    animation: fadein 500ms;
+    -moz-animation: fadein 500ms;
+    -webkit-animation: fadein 500ms;
+    -o-animation: fadein 500ms;
+}
+
 .alert_default, #error_explanation {
   color: #565656;
   background-color: #ffffff;
