@@ -1,5 +1,5 @@
 <% content_for :head_js do %>
-  <%= javascript_packs_with_chunks_tag 'application','create_appointment'%>
+  <%#= javascript_packs_with_chunks_tag 'application','create_appointment'%>
 <% end %>
 <%= form_with(model: appointment) do |form| %>
   <% if appointment.errors.any? %>
@@ -33,7 +33,7 @@
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Phone Number</p> </td>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                <%= form.text_field :phone, required: true, :class => 'bg-white p-2 rounded border-b w-full' %>
+                <%= form.text_field :phone, required: true, :class => 'bg-white p-2 rounded border-b w-full', :placeholder => '+639xxxxxxxxxx' %>
               </td>
           </tr>
           <tr>
