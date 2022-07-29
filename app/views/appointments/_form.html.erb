@@ -128,18 +128,18 @@
                let months_30 = ['March', 'April', 'June', 'August', 'September', 'November'];
                let replaced_months = to_remove[0].replace(/\s/g, '')
                let replaced_day = to_remove[1].replace(/\s/g, '')
-               if($( "#appointment_month option:selected" ).val()== replaced_months){
+               if($( "#appointment_month option:selected" ).val()=== replaced_months){
                  $("#appointment_day option[value='"+replaced_day+"']").remove();
                }
 
-               if($( "#appointment_month option:selected" ).val() == 'February'){
+               if($( "#appointment_month option:selected" ).val() === 'February'){
                  let list = ["31", "30", "29"];
                   $('#appointment_day option').filter(function () {
                      return $.inArray(this.value, list) !== -1
                   }).remove();
                }
 
-               if(jQuery.inArray($( "#appointment_month option:selected" ).val(), months_30) != -1) {
+               if(jQuery.inArray($( "#appointment_month option:selected" ).val(), months_30) !== -1) {
                    let list = ["31"];
                    $('#appointment_day option').filter(function () {
                        return $.inArray(this.value, list) !== -1
