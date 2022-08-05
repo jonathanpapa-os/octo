@@ -106,13 +106,12 @@
       let $cloned_options = $("#for_cloning_select > option").clone();
       $.each( array, function( key, value ) {
           let fullname = value.split("-");
-          let year = '';
-          let month = '';
-          let day_and_time = '';
+          let year;
+          let day_and_time;
           year=fullname[0];
           day_and_time=fullname[fullname.length-1];
           for(let i=1; i < fullname.length-1; i++) {
-             let month =  month +" "+ fullname[i];
+             let month = month +" "+ fullname[i];
              let i = day_and_time.indexOf(' ');
              let day = day_and_time.slice(0, i).trim();
              let time = day_and_time.slice(i + 1, day_and_time.length).trim();
