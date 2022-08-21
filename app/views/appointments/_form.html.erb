@@ -116,10 +116,12 @@
              let day = day_and_time.slice(0, i).trim();
              let time = day_and_time.slice(i + 1, day_and_time.length).trim();
              date_to_remove.push(month+','+day+','+time+','+year);
+              let appointment_options = $('#appointment_day option');
+              let appointment_options_selected = $('#appointment_day option:selected');
 
 
-             $.each(date_to_remove, function( key, value ) {
-               $('#appointment_day option').remove();
+              $.each(date_to_remove, function( key, value ) {
+               appointment_options.remove();
                $('#appointment_day').append($cloned_options);
                $("#appointment_day").val('1');
                let text = value + '';
@@ -127,11 +129,11 @@
                let months_30 = ['March', 'April', 'June', 'August', 'September', 'November'];
                let replaced_months = to_remove[0].replace(/\s/g, '')
                let replaced_day = to_remove[1].replace(/\s/g, '')
-               if($( "#appointment_month option:selected" ).val()=== replaced_months){
+               if(appointment_options_selected.val()=== replaced_months){
                  $("#appointment_day option[value='"+replaced_day+"']").remove();
                }
 
-               if($( "#appointment_month option:selected" ).val() === 'February'){
+               if(appointment_options_selected.val() === 'February'){
                  let list = ["31", "30", "29"];
                   $('#appointment_day option').filter(function () {
                      return $.inArray(this.value, list) !== -1
