@@ -14,7 +14,7 @@
     <%= javascript_include_tag "https://code.jquery.com/jquery-3.6.0.min.js" %>
     <%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js" %>
     <%= javascript_include_tag "https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" %>
-
+    <%= yield(:head_js) %>
   </head>
 
 <body class="bg-gray-200">
@@ -39,9 +39,9 @@
           <!-- <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"> -->
 
           <% if user_signed_in? %>
-            <% if current_user.superadmin_role == TRUE %>
+            <% if current_user.superadmin_role %>
             <a href="<%= new_appointment_path %>" class="font-black text-white w-auto">Admin</a>
-            <% elsif current_user.supervisor_role == TRUE || current_user.user_role == TRUE %>
+            <% elsif current_user.supervisor_role %>
             <a href="<%= new_appointment_path %>" class="font-black text-white w-auto"><%= @tenant.company_name %></a>
             <% end %>
           <% else %>
@@ -55,11 +55,11 @@
             <!--  bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium  -->
 
             <% if user_signed_in? %>
-              <% if current_user.superadmin_role == TRUE %>
+              <% if current_user.superadmin_role %>
                 <%= link_to "Admin Dashboard", rails_admin_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium', target: :_blank %>
                 <%= link_to "Manage Tenants", tenants_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
                 <%= link_to 'Create Tenant', new_tenant_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
-                <% elsif current_user.supervisor_role == TRUE && current_user.email == @tenant.email %>
+                <% elsif current_user.supervisor_role %>
                 <%= link_to "Manage Appointments", appointments_path, class:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium' %>
                 <%= link_to 'Edit Company', edit_tenant_path(@tenant), class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
               <% end %>

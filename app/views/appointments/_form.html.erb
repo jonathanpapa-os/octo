@@ -1,6 +1,7 @@
 <% content_for :head_js do %>
-  <%= javascript_packs_with_chunks_tag 'application','create_appointment'%>
+  <%= javascript_packs_with_chunks_tag 'create_appointment'%>
 <% end %>
+
 <%= form_with(model: appointment) do |form| %>
   <% if appointment.errors.any? %>
     <div id="error_explanation">
