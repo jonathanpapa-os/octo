@@ -69,6 +69,7 @@
         </div>
       </div>
 
+      <% if user_signed_in? %>
         <div class="ml-3 relative">
            <div x-data="{ dropdownOpen: false }" class="relative my-32">
               <button @click="dropdownOpen = !dropdownOpen" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -78,23 +79,16 @@
               <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10" style="display: none;"></div>
               <div x-show="dropdownOpen" class="absolute w-64 right-0 mt-2 bg-white rounded-md shadow-lg overflow-hidden z-20" style="display: none;">
                  <div class="py-2">
-
-                   <% if user_signed_in? %>
-                     <%= link_to "User Profile", edit_user_registration_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :get %>
-                     <%= link_to "Logout", destroy_user_session_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :delete %>
-                   <% else %>
-                     <%= link_to "Sign up", new_registration_path(resource_name),class: "flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
-                     <%= link_to "Log in", new_session_path(resource_name),class: "flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" %>
-                 <% end %>
-
+                   <%= link_to "User Profile", edit_user_registration_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :get %>
+                   <%= link_to "Logout", destroy_user_session_path, class:"flex block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100", 'role':"menuitem", method: :delete %>
                  </div>
               </div>
            </div>
         </div>
+      <% end %>
 
       </div>
     </div>
-  </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="sm:hidden" id="mobile-menu">
