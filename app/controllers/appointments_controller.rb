@@ -31,7 +31,7 @@ class AppointmentsController < ApplicationController
     minute = params[:appointment]["time(5i)"]
 
     appointment = "#{year}-#{month}-#{day} #{hour}:#{minute}:00"
-    @appointment = Appointment.new(appointment_params)
+    @appointment = Appointment.new()
     @appointment.birthday = birthday
     @appointment.appointment = appointment
 
