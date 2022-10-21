@@ -1,3 +1,5 @@
+global.$ = require("jquery")
+
 let $options = $("#appointment_day > option").clone();
 $('#for_cloning_select').append($options);
 
