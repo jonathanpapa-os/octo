@@ -1,0 +1,2 @@
+class TimeTrackerController < ApplicationController
+end
