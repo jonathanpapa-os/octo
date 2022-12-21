@@ -1,6 +1,6 @@
 <% content_for :title do %><%= @tenant.company_name %><% end %>
 <br>
-<% if current_user.superadmin_role == TRUE || current_user.email == @tenant.email %>
+<% if current_user.superadmin_role == TRUE || current_user.supervisor_role == TRUE || current_user.email == @tenant.email %>
 
   <div class="container mx-auto px-4 sm:px-8">
       <div class="py-8">

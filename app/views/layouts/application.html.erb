@@ -44,6 +44,8 @@
             <a href="<%= new_appointment_path %>" class="font-black text-white w-auto">Admin</a>
             <% elsif current_user.supervisor_role %>
             <a href="<%= new_appointment_path %>" class="font-black text-white w-auto"><%= @tenant.company_name %></a>
+            <% else %>
+            <a href="<%= new_appointment_path %>" class="font-black text-white w-auto">Octo Sched</a>
             <% end %>
           <% else %>
             <a href="<%= new_appointment_path %>" class="font-black text-white w-auto">Octo Sched</a>
