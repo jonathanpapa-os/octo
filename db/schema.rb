@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_14_084247) do
+ActiveRecord::Schema.define(version: 2022_12_31_014712) do
 
   create_table "appointments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "company_name"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 2022_02_14_084247) do
     t.string "url"
     t.string "company_name"
     t.string "company_description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "time_trackers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.date "time_start"
+    t.date "time_end"
+    t.float "total_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

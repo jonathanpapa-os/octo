@@ -4,6 +4,7 @@ class TimeTrackersController < ApplicationController
   # GET /time_trackers or /time_trackers.json
   def index
     @time_trackers = TimeTracker.all
+    render(:layout => "layouts/main")
   end
 
   # GET /time_trackers/1 or /time_trackers/1.json
