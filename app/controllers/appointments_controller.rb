@@ -77,12 +77,15 @@ class AppointmentsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def appointment_params
-    params.require(:appointment).permit(:name, :gender, :phone, :email, :tenant_id, :company_name, :address)
+    params.require(:appointment).permit(:name, :gender, :phone, :email, :tenant_id, :company_name, :address, :birthday)
   end
 
   # ...
 
   def set_tenant
-    @tenant = Tenant.find_by!(id: 1)
+    #@tenant = Tenant.find_by!(id: 1)
+    @tenant = Tenant.find_by!(url: request.subdomain)
+    # To access specific tenant, you just need to add the tenant's url before the local host like this: http://tenant1.localhost:3000/
+    # Without the request.subdomain on set_tenant, you cannot access the right tenant's url
   end
 end
