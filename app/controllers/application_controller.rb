@@ -10,10 +10,10 @@ class ApplicationController < ActionController::Base
 
     def redirect
         if user_signed_in?
-            if current_user.superadmin_role == TRUE 
+            if current_user.superadmin_role == 1
                 redirect_to tenants_path
             else
-                if current_user.supervisor_role == TRUE 
+                if current_user.supervisor_role == 1
                     redirect_to appointments_path
                 else
                 redirect_to new_appointment_path
