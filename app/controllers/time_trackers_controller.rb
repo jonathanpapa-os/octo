@@ -19,6 +19,7 @@ class TimeTrackersController < ApplicationController
 
   # GET /time_trackers/1/edit
   def edit
+  render(:layout => "layouts/main")
   end
 
   # POST /time_trackers or /time_trackers.json
