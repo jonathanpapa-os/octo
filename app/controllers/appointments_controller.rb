@@ -83,8 +83,12 @@ class AppointmentsController < ApplicationController
   # ...
 
   def set_tenant
-    #@tenant = Tenant.find_by!(id: 1)
-    @tenant = Tenant.find_by!(url: request.subdomain)
+    # @tenant = Tenant.find_by!(id: 1)
+    begin
+      @tenant = Tenant.find_by!(url: request.subdomain)
+    rescue
+        #... error handler
+    end
     # To access specific tenant, you just need to add the tenant's url before the local host like this: http://tenant1.localhost:3000/
     # Without the request.subdomain on set_tenant, you cannot access the right tenant's url
   end
