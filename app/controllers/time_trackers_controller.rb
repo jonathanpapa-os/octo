@@ -9,6 +9,7 @@ class TimeTrackersController < ApplicationController
 
   # GET /time_trackers/1 or /time_trackers/1.json
   def show
+  render(:layout => "layouts/main")
   end
 
   # GET /time_trackers/new
@@ -18,6 +19,7 @@ class TimeTrackersController < ApplicationController
 
   # GET /time_trackers/1/edit
   def edit
+  render(:layout => "layouts/main")
   end
 
   # POST /time_trackers or /time_trackers.json
