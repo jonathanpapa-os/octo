@@ -1,9 +1,9 @@
 class TimeTrackersController < ApplicationController
-  before_action :set_time_tracker, only: %i[ show edit update destroy ]
+  # before_action :set_time_tracker, only: %i[ show edit update destroy ]
 
   # GET /time_trackers or /time_trackers.json
   def index
-    @time_trackers = TimeTracker.all
+    @time_trackers = TimeTrackers.all
     render(:layout => "layouts/main")
   end
 
