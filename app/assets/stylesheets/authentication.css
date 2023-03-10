@@ -11,28 +11,26 @@ body {
 
 nav {
   height: 64px;
-  padding: 0px 32px;
+  padding: 0 32px;
   border-bottom: 1px solid #4338ca;
   text-align: left;
-  box-shadow: 0px 0px 4px #4338ca99;
+  box-shadow: 0 0 4px #4338ca99;
 }
 nav ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 .button {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     margin: 0 8px;
-    padding: 0px 32px;
+    padding: 0 32px;
     display: block;
     height: 100%;
     min-width:9px;
     line-height: 64px;
-    border: 1px solid #C24032;
-    border-width: 0px 1px;
-    box-shadow: 0px 0px 4px #C24032;
+    box-shadow: 0 0 4px #C24032;
     transition: box-shadow .2s linear;
 }
 nav ul li, .radio > .button {
@@ -66,7 +64,7 @@ nav ul li, .radio > .button {
 .button.active {
     color: #eee;
     border-color: #C24032;
-    box-shadow: 0px 0px 4px #C24032 inset;
+    box-shadow: 0 0 4px #C24032 inset;
 }
 nav ul li a:active {
     color: #eee;
@@ -81,7 +79,7 @@ nav ul li a.active {
     margin: 13px 0 4px 4px;
     display: inline-block;
     width: 256px;
-    box-shadow: 0px 0px 8px rgba(68, 140, 160, 0.5);
+    box-shadow: 0 0 8px rgba(68, 140, 160, 0.5);
 }
 .dialog:after,
 .dialog:before {
@@ -110,15 +108,11 @@ nav ul li a.active {
     color: #fff;
     font-weight: bold;
     text-align: center;
-    border: 1px solid #5189B5;
-    border-width: 0px 0px 1px 0px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 4px;
-    margin-top: 8px;
+    border-width: 0 0 1px 0;
+    margin: 8px 0 4px;
     padding: 8px 16px;
     background: #5C9CCE;
-    box-shadow: 0px 1px 4px rgba(68, 120, 160, 0.1);
+    box-shadow: 0 1px 4px rgba(68, 120, 160, 0.1);
     font-size: 16px;
     line-height:2em;
 }
@@ -174,7 +168,7 @@ nav ul li a.active {
 .closeBtn {
   position: absolute;
   right: 8px;
-  top: 0px;
+  top: 0;
   cursor: pointer;
 }
 
