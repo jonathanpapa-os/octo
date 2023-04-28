@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :time_trackers
   get 'time_trackers/index'
   resources :tenants
   resources :appointments
