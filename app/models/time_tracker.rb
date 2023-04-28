@@ -1,2 +1,0 @@
-class TimeTracker < ApplicationRecord
-end
