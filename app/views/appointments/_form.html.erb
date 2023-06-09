@@ -50,7 +50,7 @@
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Birthday</p> </td>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left pl-5">
-                <%= form.date_select :birthday,{:start_year => Date.today.year, :end_year => 1960}, {class: "form-select appearance-none px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}  %>
+                <%= form.date_select :birthday,{:start_year => Date.today.year, :end_year => 1960}, {class: "form-select appearance-none px-3 py-1.5  font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}  %>
               </td>
           </tr>
           <tr>
@@ -64,12 +64,12 @@
           <tr>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm"> <p class="text-gray-900 whitespace-no-wrap text-left">Date & Time</p> </td>
               <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-left pl-5">
-                <%= form.select :year, (Date.today.year..Date.today.year+2).collect { |y| y }, options = {}, id: "", :class => "form-select appearance-none px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" %>
+                <%= form.select :year, (Date.today.year..Date.today.year+2).collect { |y| y }, options = {}, id: "", :class => "form-select appearance-none px-3 py-1.5  font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" %>
 
-                <%= form.select :month, options_for_select(%w[January February March April May June July August September October November December]), {}, { :class => 'month_select form-select appearance-none px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'} %>
-                <%= form.select :day, options_for_select(%w[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31]), {}, { :class => 'day_select form-select appearance-none px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none' } %>
+                <%= form.select :month, options_for_select(%w[January February March April May June July August September October November December]), {}, { :class => 'month_select form-select appearance-none px-3 py-1.5  font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'} %>
+                <%= form.select :day, options_for_select(%w[1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31]), {}, { :class => 'day_select form-select appearance-none px-3 py-1.5  font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none' } %>
 
-                <%= form.time_select :time, {:ignore_date => true, :minute_step => 30, :ampm => true }, { :class => "form-select appearance-none px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" }  %>
+                <%= form.time_select :time, {:ignore_date => true, :minute_step => 30, :ampm => true }, { :class => "form-select appearance-none px-3 py-1.5  font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" }  %>
               </td>
           </tr>
       </tbody>
